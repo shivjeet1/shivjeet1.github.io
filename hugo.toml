@@ -4,7 +4,6 @@ defaultContentLanguage = "en"
 enableEmoji = true
 enableRobotsTXT = true
 languageCode = "en"
-# Choose one of emacs, trac or perldoc
 pygmentsStyle = "monokai"
 theme = "gokarna-hugo"
 
