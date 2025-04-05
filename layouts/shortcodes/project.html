@@ -1,0 +1,52 @@
+{{ $type := .Get 0 | default "projects" }}
+
+<div class="project-grid">
+  
+  {{/* CHECK 1: Is this a Content Section? (e.g., "blogs") */}}
+  {{ $sectionPages := where .Site.RegularPages "Section" $type }}
+  
+  {{ if gt (len $sectionPages) 0 }}
+    {{/* --- RENDER CONTENT PAGES (AUTOMATIC) --- */}}
+    {{ range $sectionPages }}
+      <a class="project-card" href="{{ .RelPermalink }}">
+        
+        {{/* 1. Capture the Title in a variable so we can use it inside 'with' */}}
+        {{ $projectTitle := .Title }}
+
+        {{/* Look for 'image' or 'cover' in frontmatter */}}
+        {{ $img := .Params.image | default .Params.cover }}
+        
+        {{ with $img }}
+          {{/* 2. Use the variable here instead of $.Title */}}
+          <img class="project-image" src="{{ . }}" alt="{{ $projectTitle }}">
+        {{ end }}
+
+        <div class="project-title">{{ .Title }}</div>
+        <div class="project-meta">{{ .Date.Format "Jan 02, 2006" }}</div>
+        <div class="project-summary">{{ .Summary | truncate 120 }}</div>
+      </a>
+    {{ end }}
+
+  {{ else }}
+
+    {{/* --- RENDER DATA FILE (MANUAL via data/projects.yml) --- */}}
+    {{ $data := index .Site.Data $type }}
+    {{ range $data }}
+      <a class="project-card" href="{{ .link | default "#" }}" target="_blank">
+        
+        {{/* 1. Capture the Title from the YAML data */}}
+        {{ $projectTitle := .title }}
+
+        {{ with .image }}
+          {{/* 2. Use the variable here instead of $.title */}}
+          <img class="project-image" src="{{ . }}" alt="{{ $projectTitle }}">
+        {{ end }}
+
+        <div class="project-title">{{ .title }}</div>
+        {{ with .date }}<div class="project-meta">{{ . }}</div>{{ end }}
+        <div class="project-summary">{{ .summary }}</div>
+      </a>
+    {{ end }}
+    
+  {{ end }}
+</div>

@@ -1,0 +1,68 @@
+{{ define "main" }}
+
+<!-- HERO SECTION -->
+<section id="home" class="home-about">
+    <div class="avatar">
+        {{ if isset .Site.Params "avatarurl" }}
+        <img class={{ .Site.Params.AvatarSize | default "size-m" }} src='{{ .Scratch.Get "avatarImgSrc" }}' alt="{{ .Site.Params.AvatarAltText|default "avatar" }}">
+        {{ end }}
+    </div>
+
+    <h1>{{ .Site.Title }}</h1>
+
+    {{ if isset .Site.Params "description" }}
+        <h2>{{ .Site.Params.Description }}</h2>
+    {{ end }}
+
+    <div class="home-content" style="margin-top: 2rem;">
+        {{ .Content }}
+    </div>
+
+</section>
+
+<div class="flex-break"></div>
+
+<!-- ABOUT SECTION -->
+<section id="about" style="margin-top: 5rem; padding-top: 2rem;">
+    {{ with .Site.GetPage "/about" }}
+        {{ .Content }}
+    {{ end }}
+</section>
+
+<!-- BLOGS SECTION -->
+<section id="projects" style="margin-top: 5rem; padding-top: 2rem;">
+    {{ if isset .Site.Params "showpostsonhomepage" }}
+        <div class="flex-break"></div>
+        {{ partial "home-projects.html" . }}
+    {{ end }}
+</section>
+
+<!-- BLOGS SECTION -->
+<section id="blogs" style="margin-top: 5rem; padding-top: 2rem;">
+    {{ if isset .Site.Params "showpostsonhomepage" }}
+        <div class="flex-break"></div>
+        {{ partial "home-blogs.html" . }}
+    {{ end }}
+</section>
+<br>
+<br>
+
+<!-- RESUME DOWNLOAD BUTTON -->
+<div style="text-align: center; margin-top: 2rem;">
+    {{ if isset .Site.Params "resumeurl" }}
+    <a href="{{ .Site.Params.resumeURL }}" target="_blank" rel="noopener noreferrer" class="resume-btn">
+        <span data-feather="download"></span> Download Resume / CV
+    </a>
+    {{ end }}
+</div>
+
+<!-- DYNAMIC BACK-TO-TOP INJECTION -->
+{{ if .Site.Params.showBackToTopButton }}
+    {{ partial "back-to-top.html" . }}
+
+{{ end }}
+
+{{ end }}
+
+
+

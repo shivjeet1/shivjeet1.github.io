@@ -1,0 +1,95 @@
+<style>
+    .development-card {
+        display: block;
+        padding: 1.25rem;
+        border: 1px solid #2f2f2f;
+        border-radius: 0.85rem;
+        text-decoration: none;
+        background-color: #0a0a0a;
+        color: #e0e0e0;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .development-card:hover{
+        transform: translateY(-5px);
+        border-color: #5a13ac;
+        box-shadow: 0 6px 20px rgba(111, 53, 245, 0.479);
+    }
+    
+    .development-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+        color: #ffffff;
+    }
+    
+    .development-meta {
+        font-size: 0.85rem;
+        color: #999999;
+        margin-bottom: 0.6rem;
+    }
+    
+    .development-summary {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #d1d1d1;
+    }
+    
+    .development-commits {
+        font-size: 0.85rem;
+        color: #5e23ff;
+        border-radius: 5px;
+        bottom: 2rem;
+    }
+    
+    .development-languages {
+        font-size: 0.85rem;
+        color: #b3b3ff;
+        background-color: rgb(0, 46, 46);
+        padding: 2.5px 5px;
+        border-radius: 8px;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    </style>
+    
+    <a class="development-card" href="{{ .Get "link" }}">
+      <div class="development-title">{{ .Get "title" }}</div>
+      <div class="development-meta">{{ .Get "date" }}</div>
+      <div class="development-summary">{{ .Get "summary" }}</div>
+      <div class="development-commits" id="commit-count-{{ .Get "title" | urlize }}">
+        Commits: ...
+      </div>
+      <div class="development-languages">{{ .Get "lang" }}</div>
+    </a>
+    
+    <script>
+    (function() {
+      const repoUrl = "{{ .Get "link" }}"; 
+      const repoPath = repoUrl.replace('https://github.com/', '');
+      const commitElement = document.getElementById("commit-count-{{ .Get "title" | urlize }}");
+      const langElement = document.getElementById("languages-{{ .Get "title" | urlize }}");
+    
+      // Fetch commits count
+      fetch(`https://api.github.com/repos/${repoPath}/commits?per_page=1`)
+        .then(res => {
+          const linkHeader = res.headers.get('Link');
+          if(linkHeader) {
+            const lastPageMatch = linkHeader.match(/&page=(\d+)>; rel="last"/);
+            if(lastPageMatch) commitElement.innerText = `Commits: ${lastPageMatch[1]}`;
+            else commitElement.innerText = `Commits: 1`;
+          } else {
+            commitElement.innerText = `Commits: 1`;
+          }
+        })
+        .catch(err => {
+          commitElement.innerText = `Commits: N/A`;
+          console.error(err);
+        });
+    })();
+    </script>
+    

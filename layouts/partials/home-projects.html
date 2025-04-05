@@ -1,0 +1,39 @@
+<div class="home-projects project-section">
+    <div class="section-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; margin-top: 2rem; padding-bottom: 0.5rem;">
+        <h2 style="margin: 0;">Top Projects</h2>
+        <a href="/projects/" style="text-decoration: none; color: #888; font-size: 0.9rem; transition: 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'">See More Projects →</a>
+    </div>
+
+    <div class="project-grid" style="margin-top: 1.5rem;">
+        {{/* Fetch only top 3 projects from markdown files or data fallback */}}
+        {{ $sectionPages := where .Site.RegularPages "Section" "projects" }}
+        
+        {{ if gt (len $sectionPages) 0 }}
+            {{ range $sectionPages | first 3 }}
+            <a class="project-card" href="{{ .RelPermalink }}">
+                {{ $img := .Params.image | default .Params.cover | default .Params.featureImage }}
+                {{ with $img }}
+                    <img class="project-image" src="{{ . }}" alt="{{ $.Title }}" style="width: 100%; border: 1px solid #222; border-radius: 4px;">
+                {{ end }}
+                <div class="project-title">{{ .Title }}</div>
+                <div class="project-meta">{{ .Date.Format "Jan 02, 2006" }}</div>
+                <div class="project-summary">{{ .Summary | truncate 100 }}</div>
+            </a>
+            {{ end }}
+        {{ else }}
+            {{/* Fallback to your YAML data if no markdown pages exist */}}
+            {{ $data := index .Site.Data "projects" }}
+            {{ range first 3 $data }}
+            <a class="project-card" href="{{ .link | default "#" }}" target="_blank">
+                {{ with .image }}
+                    <img class="project-image" src="{{ . }}" alt="{{ .title }}" style="width: 100%; border: 1px solid #222; border-radius: 4px;">
+                {{ end }}
+                <div class="project-title">{{ .title }}</div>
+                {{ with .date }}<div class="project-meta">{{ . }}</div>{{ end }}
+                <div class="project-summary">{{ .summary }}</div>
+            </a>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
+

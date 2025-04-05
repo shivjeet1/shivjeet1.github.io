@@ -1,0 +1,71 @@
+baseURL = "https://shivjeet1.tech/"
+title = "Shivam Lawale"
+defaultContentLanguage = "en"
+enableEmoji = true
+enableRobotsTXT = true
+languageCode = "en"
+
+[params]
+  enableThemeToggle = false
+  avatarAltText = "Shivam Lawale - QA & Systems Engineer"
+  avatarSize = "size-m"
+  avatarURL = "/images/shivam1.jpg"
+
+  showPostsOnHomePage = "recent" 
+  numberPostsOnHomePage = 3
+  showRecentPostsOnHomePage = true
+  showBackToTopButton = true 
+
+  customHeadHTML = """
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  """
+  cssFiles = ["css/navbar.css", "css/pureblack.css", "css/math.css", "css/skills.css"]
+  resumeURL = "https://shivjeet1.s-ul.eu/NhiM9pPs"
+
+  description = "Linux, CI/CD and System Architecture."
+  author = 'Shivam Lawale'
+  metaKeywords = ["SDET", "QA Automation", "Linux", "DevOps", "CI/CD", "Go", "Rust", "Shivam Lavhale"]
+
+socialIcons = [ 
+  {name = "linkedin", url = "https://www.linkedin.com/in/shivam-lavhale"},
+  {name = "github", url = "https://github.com/shivjeet1"},
+  {name = "gmail", url = "mailto:shivamlawale2005@gmail.com"}
+]
+
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "<span data-feather='home'></span>"
+    url = "/#home"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    pre = "<span data-feather='user'></span>"
+    url = "/#about"
+    weight = 2
+
+  [[menu.main]]
+    name = "Projects"
+    pre = "<span data-feather='code'></span>"
+    url = "/#projects"
+    weight = 3
+
+  [[menu.main]]
+    name = "Blogs"
+    pre = "<span data-feather='book-open'></span>"
+    url = "/#blogs"
+    weight = 4
+
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 4
+    ordered = false
+
+[minify]
+    minifyOutput = true
+
+
