@@ -1,5 +1,5 @@
 ---
-author : ''
+author : 'Shivam'
 title : 'Shivam Vishnu Lavhale'
 ShowShareButtons : false
 ShowReadingTime : false
@@ -17,7 +17,6 @@ Currently, I am an UnderGrad studying at [Shri Sant Gajanan Maharaj College of E
 
 - My Tech journey started as soon as I got my own Android Phone *(Redmi Note 8)* back in 2019 *(Corona-Time)*. I got curious so Learnt many things, bricked my device a few times as well, but in the end, I made sure that the performance is never *compromised*. Check my [Blog](/blog/blog1).
 
----
 Skills
 ---
 - Languages: C *(Programming)*, Bash *(Scripting)*, Java *(App Development)*, Pyhon *(Minor Tools)*
