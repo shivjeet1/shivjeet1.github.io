@@ -33,11 +33,15 @@ theme = "gokarna-hugo"
     </script>
   """
 
-  description = "Sky above, sand below and peace within"
+  description = "Sky above, River below and PEACE within"
   author = 'Shivam Vishnu Lavhale'
   metaKeywords = ["blog", "shivjeet1", "hugo"]
   footer = " [Shivam Lavhale](https://github.com/shivjeet1)"
   showBackToTopButton = true # true or false for "back to top" button on posts and pages
+
+
+
+
 socialIcons = [ 
     {name = "twitter", url = "https://x.com/shivjeet_1"},
     {name = "linkedin", url = "https://www.linkedin.com/in/shivam-lavhale"},
