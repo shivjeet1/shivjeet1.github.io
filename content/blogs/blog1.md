@@ -1,7 +1,7 @@
 ---
 author: "Shivam Lavhale"
 title: "Unlocking Bootloader on Redmi Note 8: A Complete Guide"
-date: 2020-07-07
+date: 2020-12-31
 description: "Learn how to unlock the bootloader on your Redmi Note 8, including the pros and cons of an unlocked bootloader and the step-by-step process to do it."
 summary: "This blog covers the detailed steps to unlock the bootloader on your Redmi Note 8, along with the benefits and risks of doing so. A personal take on experimenting with custom ROMs and modifications."
 tags: ["Redmi Note 8", "Bootloader", "Xiaomi", "Custom ROMs", "Rooting"]
@@ -86,5 +86,3 @@ What’s Next After Unlocking?
 Conclusion:
 ---
 Unlocking the bootloader on your Redmi Note 8 opens up a world of possibilities for customization and performance improvements. However, proceed with caution and ensure you understand the risks involved. Happy modding!
-
-

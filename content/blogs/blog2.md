@@ -1,90 +1,105 @@
 ---
-title: "Unlocking Bootloader on Redmi Note 8: A Complete Guide"
-date: 2025-04-04
-description: "Learn how to unlock the bootloader on your Redmi Note 8, including the pros and cons of an unlocked bootloader and the step-by-step process to do it."
-summary: "This blog covers the detailed steps to unlock the bootloader on your Redmi Note 8, along with the benefits and risks of doing so. A personal take on experimenting with custom ROMs and modifications."
-tags: ["Redmi Note 8", "Bootloader", "Xiaomi", "Custom ROMs", "Rooting"]
+author: "Shivam Lavhale"
+title: "Installing Custom Recovery"
+date: 2021-01-07
+description: "Learn how to install TWRP custom recovery on your Android device without using a computer. A handy guide for enthusiasts who want more control over their phones."
+summary: "This guide explains how to install TWRP recovery directly on an Android device without needing a PC. Ideal for users with unlocked bootloaders who want to flash ROMs or root their device."
+tags: ["TWRP", "Custom Recovery", "Android", "Rooting", "Bootloader"]
+ShowPostNavLinks: true
+weight: 26
+type: post
+image: "/images/blog2/install-twrp.jpg"
 showTableOfContents: true
+draft: false
 ---
 
-# Unlocking Bootloader on Redmi Note 8: A Complete Guide
+Installing TWRP Custom Recovery Without a PC
+---
+Once you’ve unlocked your bootloader, the next step in Android customization is installing a custom recovery. TWRP (Team Win Recovery Project) is the most widely used recovery for flashing ROMs, Magisk, and creating backups. This guide walks you through installing TWRP on your device without the need for a computer.
 
-Unlocking the bootloader is the first step to fully customizing your Xiaomi device. My Redmi Note 8 was my experimental device where I first learned about unlocking the bootloader, flashing ROMs, and exploring custom recoveries. If you're looking to unlock your Redmi Note 8’s bootloader, this guide will walk you through the process.
+![TWRP Boot Screen](/images/blog2/install-twrp.jpg "TWRP Recovery")
 
-## What is a Bootloader?
+What is TWRP Recovery?
+---
+TWRP is a touch-based custom recovery that replaces your device’s stock recovery. It allows for advanced actions such as:
+- Flashing ZIPs (ROMs, Magisk, kernels, mods)
+- Creating/restoring full backups (Nandroid)
+- Wiping specific partitions (Cache, Dalvik, Data, etc.)
+- Mounting internal storage and ADB sideloading
+- File Manager, Terminal access, and more
 
-A bootloader is a program that initializes the operating system when you power on your device. By default, Xiaomi locks the bootloader to ensure security and prevent unauthorized modifications.
-
-## ✅ Pros and ❌ Cons of Unlocking Bootloader
-
-### Pros
-
-* **Install Custom ROMs** – Get rid of MIUI and experience cleaner, faster ROMs like LineageOS or crDroid.
-* **Root Access** – Gain administrative control using Magisk.
-* **Flash Custom Recoveries** – Install TWRP or OrangeFox for advanced flashing options.
-* **Debloat & Performance Optimization** – Remove unnecessary system apps and optimize the device.
-* **Advanced Customization** – Modify system-level settings and themes.
-
-### Cons
-
-* **Voids Warranty** (in some cases) – Unlocking may void Xiaomi's official warranty.
-* **Device Security Risk** – An unlocked bootloader makes it easier for malicious software to modify the system.
-* **OTA Updates Might Break Things** – Official MIUI updates might not work properly after unlocking.
-* **Data Wipe** – Unlocking the bootloader erases all data from your device.
-
-## 📋 Steps to Unlock Bootloader on a Xiaomi Device
-
-### Prerequisites
-
-* A Windows PC with **Xiaomi Unlock Tool** installed
-* Your **Redmi Note 8** with at least 50% battery
-* A **Mi Account** (must be at least 3 days old)
-* A **USB Cable** to connect your device to the PC
-
-### Step-by-Step Guide
-
-#### 1. Enable Developer Options & OEM Unlocking
-
-1. Go to **Settings** → **About Phone** → Tap **MIUI version** 7 times to enable Developer Options.
-2. Navigate to **Settings** → **Additional Settings** → **Developer Options**.
-3. Enable **OEM Unlocking** and **USB Debugging**.
-4. Tap **Mi Unlock Status** and bind your Mi Account.
-
-#### 2. Apply for Bootloader Unlocking
-
-1. Download and install **Mi Unlock Tool** from Xiaomi’s [official site](https://en.miui.com/unlock/).
-2. Log in with the same **Mi Account** used on your phone.
-3. Power off your phone and boot into **Fastboot mode** (press **Power + Volume Down** simultaneously).
-4. Connect the device to the PC via USB.
-5. Launch **Mi Unlock Tool** and wait for device detection.
-6. Click **Unlock**, read the warning, and confirm.
-
-#### 3. Wait for the Unlock Period
-
-Xiaomi usually imposes a **168-hour (7-day) wait period** before allowing you to complete the unlock. Do **not** remove your Mi Account or reset your device during this time.
-
-#### 4. Final Unlock
-
-After the wait period:
-
-1. Reboot into **Fastboot mode**.
-2. Reconnect your phone to the PC.
-3. Open the **Mi Unlock Tool** again and click **Unlock**.
-
-Your device’s bootloader should now be unlocked!
-
-## 🚀 What’s Next?
-
-* **Install a Custom Recovery** (TWRP/OrangeFox)
-* **Flash a Custom ROM** like LineageOS, crDroid, or EvolutionX
-* **Root Your Device** using Magisk
-* **Backup Your Stock ROM** if you want to revert
-
-## 🧠 Conclusion
-
-Unlocking the bootloader on your Redmi Note 8 opens the door to endless customization and performance tuning, but it’s not without risks. This was my gateway into the world of Android modding, and I’ve learned a lot from it. Proceed wisely, backup everything, and happy flashing!
-
+Pros and Cons of Using TWRP
 ---
 
-> 💬 Have you unlocked your bootloader? Share your thoughts or issues in the comments below!
+✅ **Pros:**
+- Full control over your system partition and root access
+- Ability to flash custom ROMs and Magisk for rooting
+- Advanced troubleshooting and repair tools
+- On-device backup and restore with ease
+
+❌ **Cons:**
+- Replaces your stock recovery, which may affect OTA updates
+- Some devices might lose Widevine L1 (DRM) or face bootloop if improperly flashed
+- Needs careful flashing—wrong paths can soft brick your device
+
+Prerequisites
+---
+📌 **Before You Begin:**
+- Bootloader must be **unlocked**
+- Your device must be **rooted** (preferably with Magisk)
+- Downloaded TWRP `.img` file for your exact device model
+- At least 50% battery
+- Terminal emulator (like Termux) or official TWRP app installed
+
+Steps to Install TWRP Without PC
+---
+
+### 1️⃣ Step 1: Download the TWRP Image
+Get the `.img` file for your device from a trusted source. Ensure it matches your device’s codename and version.
+
+### 2️⃣ Step 2: Rename and Move
+Rename the file to `twrp.img` and place it in your internal storage’s root directory (not inside any folder) or `/sdcard`.
+
+### 3️⃣ Step 3: Launch Terminal & Gain Root Access
+Open a terminal emulator (like Termux) and enter:
+
+```bash
+su
+```
+
+### 4️⃣ Step 4: Flash TWRP Image to Recovery Partition
+Use the following command:
+
+```bash
+dd if=/sdcard/twrp.img of=/dev/block/bootdevice/by-name/recovery
+```
+
+> ⚠️ **Important:** The recovery partition path may vary based on your device. Double-check it before flashing.
+
+### 5️⃣ Step 5: Reboot into Recovery
+Immediately reboot to recovery after flashing:
+
+```bash
+reboot recovery
+```
+
+Or use your device’s key combo (usually **Power + Volume Up**).
+
+Verifying TWRP Installation
+---
+When your device boots into recovery, you should see the TWRP interface. From here, you can:
+- Flash custom ROMs or Magisk
+- Perform backups (Nandroid)
+- Wipe cache, data, or system
+- Use file manager or terminal for tweaks
+
+Troubleshooting Tips
+---
+- 🔒 If TWRP reverts back to stock recovery, flash a **disable encryption** or **DM-Verity** zip after installing TWRP.
+- 🛠️ Flashing fails? Double-check the recovery partition path.
+- 🚫 Some devices may not support this method and require fastboot.
+
+Conclusion
+---
+Installing TWRP without a PC is a powerful trick for rooted users. It’s a convenient way to gain full control over your phone’s software. With TWRP installed, your Android device is now ready for custom ROMs, root, mods, and more. 🔧
 
