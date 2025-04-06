@@ -7,6 +7,7 @@ ShowPostNavLinks : true
 ShowBreadCrumbs : false
 disableShare : true
 ShowToc : false
+type : page
 ---
 Introduction
 ---
