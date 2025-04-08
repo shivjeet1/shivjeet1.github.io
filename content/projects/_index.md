@@ -9,11 +9,6 @@ pygmentsUseClasses: true
 ---
 
 ## Hello, My Projects are:
-
-1. [My-Notes](/projects/my-notes/)
-
-## My Projects
-
 {{< project-grid >}}
 
   {{< project-card 
