@@ -12,15 +12,18 @@ pygmentsUseClasses: true
 
 1. [My-Notes](/projects/my-notes/)
 
+## My Projects
+
 {{< project-grid >}}
 
-{{< project-card
-    title="My Notes"
-    link="/projects/my-notes/"
-    date="2025-04-06"
-    summary="An Android note-taking application focusing on simplicity and extensibility.">}}
+  {{< project-card 
+      title="My Notes" 
+      date="2025-04-06" 
+      summary="A simple Android app for taking notes using Java and native Views."
+      link="/projects/my-notes/" 
+  >}}
+
+  <!-- Add more project-card entries here -->
 
 {{< /project-grid >}}
-<div class="bg-red-200 p-4 rounded-xl">Test Box</div>
-
 

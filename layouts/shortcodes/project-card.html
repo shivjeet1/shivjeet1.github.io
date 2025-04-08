@@ -1,6 +1,44 @@
-<a href="{{ .Get "link" }}" class="block p-4 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-xl shadow transition duration-200 no-underline">
-  <h3 class="text-lg font-semibold mb-1 text-black dark:text-white">{{ .Get "title" }}</h3>
-  <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">{{ .Get "date" }}</p>
-  <p class="text-sm text-gray-700 dark:text-gray-300">{{ .Get "summary" }}</p>
+<style>
+.project-card {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #cc7722; /* Dark orange border */
+  border-radius: 0.75rem;
+  text-decoration: no7ne;
+  background-color: #ffffff;
+  color: #000000;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(204, 119, 34, 0.2); /* Soft orange glow */
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  background-color: #b7b7b7;
+  box-shadow: 0 6px 16px rgba(204, 119, 34, 0.3); 
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #000000; /* Strong orange for title */
+}
+
+.project-meta {
+  font-size: 0.875rem;
+  color: #646969; /* Muted brownish-orange for meta */
+  margin-bottom: 0.5rem;
+}
+
+.project-summary {
+  font-size: 1rem;
+}
+
+
+</style>
+<a class="project-card" href="{{ .Get "link" }}">
+  <div class="project-title">{{ .Get "title" }}</div>
+  <div class="project-meta">{{ .Get "date" }}</div>
+  <div class="project-summary">{{ .Get "summary" }}</div>
 </a>
 
