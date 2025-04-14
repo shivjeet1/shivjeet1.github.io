@@ -1,5 +1,4 @@
 name: shivjeet1's config for hugo deploy
-
 on:
   push:
     paths-ignore:
@@ -7,7 +6,7 @@ on:
       - "LICENSE"
       - "README.md"
     branches:
-      - main  # ✅ Change to 'master' if your branch is actually named 'master'
+      - master # ✅ Change to 'master' if your branch is actually named 'master'
   workflow_dispatch:
     inputs:
       hugoVersion:
