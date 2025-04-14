@@ -16,7 +16,7 @@ Currently, I am an UnderGrad studying at [Shri Sant Gajanan Maharaj College of E
 
 - I like to EXPLORE.
 
-- My Tech journey started as soon as I got my own Android Phone *(Redmi Note 8)* back in 2019 *(Corona-Time)*. I got curious so Learnt many things, bricked my device a few times as well, but in the end, I made sure that the performance is never *compromised*. Check my [Blog](/blog/blog1).
+- My Tech journey started as soon as I got my own Android Phone *(Redmi Note 8)* back in 2019 *(Corona-Time)*. I got curious so Learnt many things, bricked my device a few times as well, but in the end, I made sure that the performance is never *compromised*. Check my [Blog](/blogs/).
 
 Skills
 ---
