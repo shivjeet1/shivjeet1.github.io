@@ -8,6 +8,6 @@
 > **Checkout [About](/about) for more.**
 
 ## Blogs
-> **Checkout my [Blogs](/blogs/_index).**
+> **Checkout my [Blogs](/blogs/).**
 
 
