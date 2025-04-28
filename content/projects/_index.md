@@ -15,7 +15,8 @@ pygmentsUseClasses: true
       title="My Notes" 
       date="2025-04-06" 
       summary="A simple Android app for taking notes using Java and native Views."
-      link="/projects/my-notes/" 
+      link="/projects/my-notes/"
+      image="/images/mynotes/mynotes.png"
   >}}
 
   <!-- Add more project-card entries here -->

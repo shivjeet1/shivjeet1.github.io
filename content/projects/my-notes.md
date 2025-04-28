@@ -72,15 +72,29 @@ My-Notes/
 ## UI Design
 
 The current UI uses basic Android Views like `EditText`, `Button`, and `TextView`. It is clean, functional, and easy to navigate. All event handlers are wired via `setOnClickListener()` in Java code. Below are four screenshots from the actual app:
+{{< project-grid >}}
+    
+{{< project-card
+    image="/images/mynotes/ui-demo1.jpg"
+>}}
 
-<div style="display: flex; flex-wrap: wrap; gap: 16px;">
-  <img src="/images/mynotes/ui-demo1.png" width="45%" />
-  <img src="/images/mynotes/ui-demo2.png" width="45%" />
-  <img src="/images/mynotes/ui-demo3.png" width="45%" />
-  <img src="/images/mynotes/ui-demo4.png" width="45%" />
-</div>
+{{< project-card
+    image="/images/mynotes/ui-demo2.jpg"
+>}}
 
-> All UI elements are designed using XML with a focus on simplicity and readability. The layout is defined in `activity_main.xml`, using a vertical `LinearLayout` with scroll support.
+{{< project-card
+    image="/images/mynotes/ui-demo3.jpg"
+
+>}}
+
+{{< project-card
+    image="/images/mynotes/ui-demo4.jpg"
+
+>}}
+
+{{< /project-grid >}}
+
+>All UI elements are designed using XML with a focus on simplicity and readability. The layout is defined in `activity_main.xml`, using a vertical `LinearLayout` with scroll support.
 
 ---
 
@@ -117,7 +131,7 @@ While functional, this approach will be upgraded to Room — a modern SQLite wra
 
 The project is simple enough to be grasped by beginners, yet structured enough to allow modular upgrades as your understanding of Android grows. As it evolves, it will serve both as a reference and a base for more complex app-building adventures.
 
-📱 **Download APK** — _Coming Soon!_
+📱 [**Download APK**](https://github.com/shivjeet1/My-Notes/releases)
 
 ---
 

@@ -79,7 +79,7 @@ Steps to Unlock Bootloader on a Xiaomi Device
 What’s Next After Unlocking?
 --
 - **Install a Custom Recovery** (TWRP/OrangeFox)
-- **Flash a Custom ROM** like LineageOS, crDroid, or EvolutionX
+- **Flash a Custom ROM** like LineageOS, CrDroid, or EvolutionX
 - **Root the Device** using Magisk
 - **[Backup Your Stock ROM](https://miuirom.org/)** in case you want to revert
 

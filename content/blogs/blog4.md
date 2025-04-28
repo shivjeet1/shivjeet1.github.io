@@ -17,7 +17,7 @@ Installing Magisk and Rooting Redmi Note 8
 ---
 Once you've [unlocked your bootloader](../unlocking-bootloader-redmi-note8/) and [installed TWRP](../installing-twrp-custom-recovery-without-a-pc/) on your Redmi Note 8, you're all set to root your device. Rooting grants you superuser access, allowing full control of the Android OS. This guide walks you through the process of installing Magisk, the most popular and systemless rooting tool available.
 
-![Magisk Logo](/images/blog3/install-magisk.jpg "Magisk Root")
+![Magisk Logo](/images/blog4/install-magisk.jpg "Magisk Root")
 
 What is Magisk?
 ---
