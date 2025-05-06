@@ -22,7 +22,7 @@ Currently, I am an UnderGrad studying at [Shri Sant Gajanan Maharaj College of E
 ---
 ## Skills
 
-- Languages: C *(Programming)*, Bash *(Scripting)*, Java *(App Development)*, Pyhon *(Minor Tools)*
+- Languages: C *(Programming)*, Bash *(Scripting)*, Java *(App Development)*, Python *(Minor Tools)*
 - Can configure/setup *(use case specific)*: Linux systems, Networks, Virtual machines,Local Servers *(looking forward work on an Enterprise server)*
 - Other *(Currently learning)* : Android-Studio, Hugo, Git
 
