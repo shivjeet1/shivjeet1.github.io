@@ -14,13 +14,16 @@ pygmentsUseClasses: true
     link="https://github.com/shivjeet1/vm-lc3"
     title="Virtual Machine"
     date="2025-08-07"
+    summary="A simple Virtual Machine based on LC3 architecture."
+    lang="C"
 >}}
 ##
 {{< development
     link="https://github.com/shivjeet1/sql-C-db"
     title="SQLite"
     date="2025-06-06"
-    summary="Implementation of some features of SQLite database."
+    summary="Implementation of some features of SQLite database like '.insert.' and '.select'."
+    lang="C, Ruby"
 >}}
 ##
 {{< development
@@ -28,6 +31,7 @@ pygmentsUseClasses: true
     title="Secure OCR Tool"
     date="2025-03-18"
     summary="OCR (Optical Character Recognition) tool that runs locally."
+    lang="Python"
 >}}
 ##
 {{< development
@@ -35,6 +39,7 @@ pygmentsUseClasses: true
     title="ArchIso bundler"
     date="2025-04-01"
     summary="Unattended Arch Linux installation ISO with CI/CD pipeline." 
+    lang="Bash, Yaml"
 >}}
 ##
 {{< development 
@@ -42,6 +47,7 @@ pygmentsUseClasses: true
     title="My Notes"
     date="2024-11-28"
     summary="A simple Android app for taking notes using Java and native Views." 
+    lang="JAVA, XML"
 >}}
 ##
 {{< development
@@ -49,6 +55,7 @@ pygmentsUseClasses: true
     title="text-editor"
     date="2024-08-09"
     summary="A minimal text editor like 'nano' written in C."
+    lang="C"
     >}}
 ##
 {{< development
@@ -56,6 +63,7 @@ pygmentsUseClasses: true
     title="pacman-game-c"
     date="2024-08-17"
     summary="A pacman game game written in C. Two versions non-conio for LINUX."
+    lang="C"
 >}}
 
 

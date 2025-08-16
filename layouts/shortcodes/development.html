@@ -13,7 +13,7 @@
         position: relative;
     }
     
-    .development-card:hover {
+    .development-card:hover{
         transform: translateY(-5px);
         border-color: #5a13ac;
         box-shadow: 0 6px 20px rgba(111, 53, 245, 0.479);
@@ -40,8 +40,24 @@
     
     .development-commits {
         font-size: 0.85rem;
-        color: #5e23ff; /* gold/orange for visibility */
-        margin-bottom: 0.6rem;
+        color: #5e23ff;
+        background-color: ;
+        border-radius: 5px;
+        border-radius: 5px;
+        position: absolute
+        bottom: 2rem;
+        
+    }
+    
+    .development-languages {
+        font-size: 0.85rem;
+        color: #b3b3ff;
+        background-color: rgb(0, 46, 46);
+        padding: 2.5px 5px;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
     }
     </style>
     
@@ -52,6 +68,7 @@
       <div class="development-commits" id="commit-count-{{ .Get "title" | urlize }}">
         Commits: ...
       </div>
+      <div class="development-languages">{{ .Get "lang" }}</div>
     </a>
     
     <script>
@@ -59,15 +76,18 @@
       const repoUrl = "{{ .Get "link" }}"; 
       const repoPath = repoUrl.replace('https://github.com/', '');
       const commitElement = document.getElementById("commit-count-{{ .Get "title" | urlize }}");
-      
-      fetch(`https://api.github.com/repos/${repoPath}`)
-        .then(res => res.json())
-        .then(data => {
-          if(data && data.size !== undefined) {
-            // Using "size" as placeholder, can replace with commits API if needed
-            commitElement.innerText = `Commits: ${data.size}`;
+      const langElement = document.getElementById("languages-{{ .Get "title" | urlize }}");
+    
+      // Fetch commits count
+      fetch(`https://api.github.com/repos/${repoPath}/commits?per_page=1`)
+        .then(res => {
+          const linkHeader = res.headers.get('Link');
+          if(linkHeader) {
+            const lastPageMatch = linkHeader.match(/&page=(\d+)>; rel="last"/);
+            if(lastPageMatch) commitElement.innerText = `Commits: ${lastPageMatch[1]}`;
+            else commitElement.innerText = `Commits: 1`;
           } else {
-            commitElement.innerText = `Commits: N/A`;
+            commitElement.innerText = `Commits: 1`;
           }
         })
         .catch(err => {
