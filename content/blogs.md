@@ -22,6 +22,14 @@ I write to document, reflect, and share — hoping it helps others along the way
 {{< project-grid >}}
 
   {{< project-card
+    title="Top 5 Magisk Modules"
+    date="2022-04-19"
+    summary="Some of the most useful magisk modules which work regardless of your android version."
+    image="/images/blog5/magisk.jpg"
+    link="/blogs/blog5"
+  >}}
+
+  {{< project-card
     title= "Rooting Redmi Note 8"
     date= 2021-08-22
    summary= "This guide explains how to install Magisk on your Redmi Note 8 using TWRP recovery. If you've already unlocked your bootloader and installed a custom recovery, this is the next step in your modding journey." 

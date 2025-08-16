@@ -1,7 +1,7 @@
 ---
 author: "Shivam Lavhale"
 title: "Installing Custom Recovery"
-date: 2021-01-07
+date: 2022-01-07
 description: "Learn how to install TWRP custom recovery on your Android device without using a computer. A handy guide for enthusiasts who want more control over their phones."
 summary: "This guide explains how to install TWRP recovery directly on an Android device without needing a PC. Ideal for users with unlocked bootloaders who want to flash ROMs or root their device."
 tags: ["TWRP", "Custom Recovery", "Custom ROMs", "Rooting", "Bootloader"]
