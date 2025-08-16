@@ -9,17 +9,53 @@ pygmentsUseClasses: true
 ---
 
 ## Hello, My Projects are:
-{{< project-grid >}}
 
-  {{< project-card 
-      title="My Notes" 
-      date="2025-04-06" 
-      summary="A simple Android app for taking notes using Java and native Views."
-      link="/projects/my-notes/"
-      image="/images/mynotes/mynotes.png"
-  >}}
+{{< development
+    link="https://github.com/shivjeet1/vm-lc3"
+    title="Virtual Machine"
+    date="2025-08-07"
+>}}
+##
+{{< development
+    link="https://github.com/shivjeet1/sql-C-db"
+    title="SQLite"
+    date="2025-06-06"
+    summary="Implementation of some features of SQLite database."
+>}}
+##
+{{< development
+    link="https://github.com/shivjeet1/sip-dev"
+    title="Secure OCR Tool"
+    date="2025-03-18"
+    summary="OCR (Optical Character Recognition) tool that runs locally."
+>}}
+##
+{{< development
+    link="https://github.com/shivjeet1/auto-install"
+    title="ArchIso bundler"
+    date="2025-04-01"
+    summary="Unattended Arch Linux installation ISO with CI/CD pipeline." 
+>}}
+##
+{{< development 
+    link="https://github.com/shivjeet1/my-Notes"
+    title="My Notes"
+    date="2024-11-28"
+    summary="A simple Android app for taking notes using Java and native Views." 
+>}}
+##
+{{< development
+    link="https://github.com/shivjeet1/text-editor"
+    title="text-editor"
+    date="2024-08-09"
+    summary="A minimal text editor like 'nano' written in C."
+    >}}
+##
+{{< development
+    link="https://github.com/shivjeet1/pacman-game-c"
+    title="pacman-game-c"
+    date="2024-08-17"
+    summary="A pacman game game written in C. Two versions non-conio for LINUX."
+>}}
 
-  <!-- Add more project-card entries here -->
-
-{{< /project-grid >}}
 

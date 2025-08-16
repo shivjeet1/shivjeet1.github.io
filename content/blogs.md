@@ -34,7 +34,7 @@ I write to document, reflect, and share — hoping it helps others along the way
     title= "Installing CrDroid Custom ROM"
     date= 2021-01-20
     summary= "A step-by-step guide to installing crDroid on your Redmi Note 8 using TWRP." 
-    image="/images/blog3/crdroid-install.jpg"
+    image="/images/blog3/images.jpg"
     link= "/blogs/blog3"
   >}}
 

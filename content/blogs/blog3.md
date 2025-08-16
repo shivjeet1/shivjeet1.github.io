@@ -19,7 +19,7 @@ So, you've unlocked your bootloader and installed TWRP—what next? Time to brea
 
 This guide walks you through installing crDroid on your device using TWRP. 🛠️
 
-![CrDroid Logo](/images/blog3/crdroid-install.jpg "crDroid")
+![CrDroid Logo](/images/blog3/images.jpg "crDroid")
 
 What is CrDroid?
 ---
