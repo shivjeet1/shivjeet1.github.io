@@ -1,7 +1,7 @@
 /* ——— BRUTE-FORCE OLED BLACK FOR DARK MODE ——— */
 
 /* Catch both auto-dark and toggle-based dark classes */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark && (not (forced-colors: active))) {
   html, body { background:#000 !important; color:#fff !important; }
 }
 html.dark, body.dark, [data-theme="dark"] {
