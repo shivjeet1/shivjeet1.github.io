@@ -4,14 +4,14 @@ defaultContentLanguage = "en"
 enableEmoji = true
 enableRobotsTXT = true
 languageCode = "en"
-pygmentsStyle = "monokai"
+#pygmentsStyle = "monokai"
 theme = "gokarna-hugo"
 
 [params]
   enableThemeToggle = false
   avatarAltText = "avatar"
   avatarSize = "size-m"
-  avatarURL = "/images/shivam.jpg"
+  avatarURL = "/images/shivam1.jpg"
   customHeadHTML = """
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/pureblack.css">

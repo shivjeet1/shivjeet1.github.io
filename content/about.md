@@ -10,9 +10,9 @@ ShowToc : false
 type : page
 ---
 
-## Introduction
+## About me
 
-- I am a Budding CSE student with skills in Web Development, Linux and C *Programming*. Passionate about open-source software and system-level development.
+- I am a Budding CSE student with interest in Linux, DevOps and C *Programming*. Passionate about open-source software and system-level development.
 Currently, I am an UnderGrad studying at [Shri Sant Gajanan Maharaj College of Engineering, Shegaon](https://ssgmce.ac.in)
 
 - I like to EXPLORE.
@@ -22,9 +22,16 @@ Currently, I am an UnderGrad studying at [Shri Sant Gajanan Maharaj College of E
 ---
 ## Skills
 
-- Languages: C *(Programming)*, Bash *(Scripting)*, Java *(App Development)*, Python *(Minor Tools)*
-- Can configure/setup *(use case specific)*: Linux systems, Networks, Virtual machines,Local Servers *(looking forward work on an Enterprise server)*
-- Other *(Currently learning)* : Android-Studio, Hugo, Git
+- Languages: C, C++, lua, Bash, Ruby(basic), Java, Python
+- Web Technologies: HTML, CSS, JavaScript.
+- Database: SQL basics, [SQLite (C implementation)](/projects/)
+- Tools & Platforms: Git, Linux, Android Studio, [HUGO](https://gohugo.io/)
+- Area of Interest: Networking, FOSS, system development, DevOps, automation.
+
+---
+## Education
+- Bachelor of Engineering in **Computer Science and Engineering** at [Shri Sant Gajanan Maharaj College of Engineering, Shegaon](https://ssgmce.ac.in)
+>Year of Graduation: 2027
 
 ---
 ## Contact
