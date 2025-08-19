@@ -4,8 +4,6 @@ defaultContentLanguage = "en"
 enableEmoji = true
 enableRobotsTXT = true
 languageCode = "en"
-#pygmentsStyle = "monokai"
-#theme = "gokarna-hugo"
 
 [params]
   enableThemeToggle = false
@@ -21,7 +19,7 @@ languageCode = "en"
   description = "Sky above, River below and PEACE within"
   author = 'Shivam Vishnu Lavhale'
   metaKeywords = ["blog", "shivjeet1", "hugo"]
-  footer = " [Shivam Lavhale](https://github.com/shivjeet1)"
+  footer = "[shivjeet1](https://github.com/shivjeet1)"
   showBackToTopButton = true # true or false for "back to top" button on posts and pages
 
 socialIcons = [ 
