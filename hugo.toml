@@ -22,9 +22,6 @@ languageCode = "en"
   footer = " [Shivam Lavhale](https://github.com/shivjeet1)"
   showBackToTopButton = true # true or false for "back to top" button on posts and pages
 
-
-
-
 socialIcons = [ 
     {name = "twitter", url = "https://x.com/shivjeet_1"},
     {name = "linkedin", url = "https://www.linkedin.com/in/shivam-lavhale"},
@@ -56,8 +53,6 @@ socialIcons = [
     pre = "<span data-feather='code'></span>"
     url = "/projects/"
     weight = 4 
-
-
 
 [markup]
   [markup.tableOfContents]
