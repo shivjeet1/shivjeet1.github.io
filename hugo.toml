@@ -4,8 +4,6 @@ defaultContentLanguage = "en"
 enableEmoji = true
 enableRobotsTXT = true
 languageCode = "en"
-#pygmentsStyle = "monokai"
-#theme = "gokarna-hugo"
 
 [params]
   enableThemeToggle = false

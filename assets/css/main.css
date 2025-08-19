@@ -2,10 +2,10 @@
   --content-width: 1120px;
   --container-width: 810px;
 
-  --light-primary-color: 255, 255, 255;
-  --light-secondary-color: #dddddd;
-  --light-tertiary-color: #272822;
-  --light-text-color: black;
+  --light-primary-color: 0, 0, 0;
+  --light-secondary-color: #2d333b;
+  --light-tertiary-color: #646464;
+  --light-text-color: white;
 }
 
 @font-face {
