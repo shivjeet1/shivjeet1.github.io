@@ -5,7 +5,7 @@ enableEmoji = true
 enableRobotsTXT = true
 languageCode = "en"
 #pygmentsStyle = "monokai"
-theme = "gokarna-hugo"
+#theme = "gokarna-hugo"
 
 [params]
   enableThemeToggle = false
