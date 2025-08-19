@@ -5,7 +5,7 @@
   --light-primary-color: 0, 0, 0;
   --light-secondary-color: #2d333b;
   --light-tertiary-color: #646464;
-  --light-text-color: white;
+  --light-text-color: white;;
 }
 
 @font-face {
