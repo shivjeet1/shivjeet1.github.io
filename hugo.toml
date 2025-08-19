@@ -29,7 +29,6 @@ socialIcons = [
     {name = "twitter", url = "https://x.com/shivjeet_1"},
     {name = "linkedin", url = "https://www.linkedin.com/in/shivam-lavhale"},
     {name = "github", url = "https://github.com/shivjeet1"},
-    {name = "twitch", url = "https://t.me/Backto_Vedas"},
     {name = "gmail", url = "mailto:shivamlavhalepatil@gmail.com"}
 ]
 
