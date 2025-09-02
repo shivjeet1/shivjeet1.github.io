@@ -1,15 +1,20 @@
-# Intro
-- I am a Budding CSE student interested in System Development, Linux, Cybersecurity and DevOps.
 
-- Passionate about open-source software and system-level development.
+## A short introduction
+- Curious by nature, A CSE student interested in System Development, Linux, Cybersecurity and DevOps.
 
-- Currently, I am an UnderGrad studying at [Shri Sant Gajanan Maharaj College of Engineering, Shegaon](https://ssgmce.ac.in)
+- Shivam enjoys tackling complex problems through code. My projects range from low-level system programming to cloud automation, each pushing him to solve challenges with efficiency and creativity.
 
-> **Checkout [About](/about) for more.**
+- Currently an UnderGrad studying at
+   >**[Shri Sant Gajanan Maharaj College of Engineering, Shegaon](https://ssgmce.ac.in)**
 
->Find my [Resume/CV here](https://shivjeet1.s-ul.eu/yXp715aX)
+- About me
+   > **Read [About](/about) for more info.**
 
-## Blogs
-> **Checkout my [Blogs](/blogs/).**
+   > **Find my [Resume/CV here](https://shivjeet1.s-ul.eu/siqb74nN)**
 
+- Blogs
+   >**Checkout my [Blogs here](/blogs/).**
+
+- Projects
+  > **See what I [build](/projects).**
 

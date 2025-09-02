@@ -6,7 +6,7 @@ summary: "Short posts on coding, projects, and learning experiences."
 
 ## Welcome
 
-These blogs are a collection of short posts, ideas, and insights from my programming journey.
+These blogs are a collection of short posts, ideas, and insights from my **Learning journey**.
 
 Expect content on:
 

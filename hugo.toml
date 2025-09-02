@@ -16,7 +16,7 @@ languageCode = "en"
     <link rel="stylesheet" fref="/css/math.css">
   """
 
-  description = "Sky above, River below and PEACE within"
+  description = "Still exploring, still learning, still building."
   author = 'Shivam Vishnu Lavhale'
   metaKeywords = ["blog", "shivjeet1", "hugo"]
   footer = "[shivjeet1](https://github.com/shivjeet1)"

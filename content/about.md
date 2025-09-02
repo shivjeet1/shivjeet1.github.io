@@ -12,29 +12,36 @@ type : page
 
 ## About me
 
-- I am a Budding CSE student with interest in Linux, DevOps and C *Programming*. Passionate about open-source software and system-level development.
-Currently, I am an UnderGrad studying at [Shri Sant Gajanan Maharaj College of Engineering, Shegaon](https://ssgmce.ac.in)
+- Just a tech-savvy CSE student having strong interests in Linux, DevOps, Cybersecurity and System Development.
 
-- I like to EXPLORE.
+- I explore through code. From hacking around with Linux installs to experimenting with AI-powered tools, I keep pushing into new areas just to see what I can build.
 
-- My Tech journey started as soon as I got my own Android Phone *(Redmi Note 8)* back in 2019 *(Corona-Time)*. I got curious so Learnt many things, bricked my device a few times as well, but in the end, I made sure that the performance is never *compromised*. Check my [Blog](/blogs/).
+- My Tech journey began as I got my Android Phone *(Redmi Note 8)* back in 2019 *(Corona-Time)*. I got curious so learnt many things, bricked my device a few times as well, but I made sure that the performance is never *compromised*.
+  >Check my [Blogs](/blogs/).
+
+- I started out rewriting code for fun — now I create tools that solve real problems, from building a database in C and simulating virtual machines to automating Linux installations and experimenting with AI-powered OCR.
 
 ---
+
 ## Skills
 
-- Languages: C, C++, lua, Bash, Ruby(basic), Java, Python
+- Languages: C, C++, Lua, Bash, Ruby(basic), Java, Python
 - Web Technologies: HTML, CSS, JavaScript.
 - Database: SQL basics, [SQLite (C implementation)](/projects/)
 - Tools & Platforms: Git, Linux, Android Studio, [HUGO](https://gohugo.io/)
-- Area of Interest: Networking, FOSS, system development, DevOps, automation.
+- Area of Interest: Networking, FOSS, system development, DevOps, Cybersecurity, automation.
 
 ---
+
 ## Education
 - Bachelor of Engineering in **Computer Science and Engineering** at [Shri Sant Gajanan Maharaj College of Engineering, Shegaon](https://ssgmce.ac.in)
->Year of Graduation: 2027
+  >Year of Graduation: 2027
 
 ---
+
 ## Contact
 
-- [Email](mailto:shivamlavhalepatil@gmail.com), [GitHub](https://github.com/shivjeet1) and
-[LinkedIn](https://www.linkedin.com/in/shivam-lavhale)
+- [Email](mailto:shivamlavhalepatil@gmail.com)
+- [GitHub](https://github.com/shivjeet1)
+- [LinkedIn](https://www.linkedin.com/in/shivam-lavhale)
+- [Telegram](https://t.me/backto_vedas)
