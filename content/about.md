@@ -24,12 +24,16 @@ type : page
 ---
 
 ## Skills
+### Technical Skills
 
-- Languages: C, C++, Lua, Bash, Ruby(basic), Java, Python
-- Web Technologies: HTML, CSS, JavaScript.
-- Database: SQL basics, [SQLite (C implementation)](/projects/)
-- Tools & Platforms: Git, Linux, Android Studio, [HUGO](https://gohugo.io/)
-- Area of Interest: Networking, FOSS, system development, DevOps, Cybersecurity, automation.
+  - **Languages:** C, C++, Lua, Bash, Ruby(basic), Java, Python
+  - **Web Technologies:** HTML, CSS, JavaScript.
+  - **Database:** SQL basics, [SQLite (C implementation)](/projects/)
+  - **System Development:** Linux ISO building, shell & dotfile configuration. 
+  - **Automation & DevOps:** GitHub Actions (CI/CD), automated build/test/deployment. 
+  - **Version Control:** Git, GitHub, project documentation. 
+  - **Tools & Technologies:** Hugo, Jekyll, Android Studio, Neovim, Google Cloud, Arch Linux.
+  - **Area of Interest:** Networking, FOSS, System Development, DevOps, Cybersecurity, automation.
 
 ---
 

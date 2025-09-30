@@ -10,7 +10,7 @@
 - About me
    > **Read [About](/about) for more info.**
 
-   > **Find my [Resume/CV here](https://shivjeet1.s-ul.eu/siqb74nN)**
+   > **Find my [Resume/CV here](https://shivjeet1.s-ul.eu/3aRLyHsB)**
 
 - Blogs
    >**Checkout my [Blogs here](/blogs/).**
