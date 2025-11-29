@@ -4,7 +4,6 @@ date: 2023-08-16
 tags: ["Android", "Magisk", "Root", "Modules", "Customization"]
 description: "Some of the most useful magisk modules which work regardless of your android version."
 summary: "Discover 5 essential Magisk modules to enhance your rooted Android device."
-tags: ["Magisk", "Rooting", "Redmi Note 8", "Custom ROMs", "TWRP"]
 ShowPostNavLinks: true
 weight: 27
 type: post
