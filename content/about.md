@@ -19,7 +19,7 @@ type : page
 - My Tech journey began as I got my Android Phone *(Redmi Note 8)* back in 2019 *(Corona-Time)*. I got curious so learnt many things, bricked my device a few times as well, but I made sure that the performance is never *compromised*.
   >Check my [Blogs](/blogs/).
 
-- I started out rewriting code for fun — now I create tools that solve real problems, from building a database in C and simulating virtual machines to automating Linux installations and experimenting with AI-powered OCR.
+- I started rewriting code for fun — now I create tools that solve real problems, from building a database in C and simulating virtual machines to automating Linux installations and experimenting with GitHub Actions to build a Cross-Platform Application.
 
 ---
 
@@ -32,7 +32,7 @@ type : page
   - **System Development:** Linux ISO building, shell & dotfile configuration. 
   - **Automation & DevOps:** GitHub Actions (CI/CD), automated build/test/deployment. 
   - **Version Control:** Git, GitHub, project documentation. 
-  - **Tools & Technologies:** Hugo, Jekyll, Android Studio, Neovim, Google Cloud, Arch Linux.
+  - **Tools & Technologies:** Hugo, Jekyll, Tauri, Android Studio, Neovim, Google Cloud, Arch Linux.
   - **Area of Interest:** Networking, FOSS, System Development, DevOps, Cybersecurity, automation.
 
 ---

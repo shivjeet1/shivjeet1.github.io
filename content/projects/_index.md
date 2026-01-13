@@ -9,6 +9,23 @@ pygmentsUseClasses: true
 ---
 
 ## Hello, My Projects are:
+##
+{{< development
+    link="https://github.com/shivjeet1/my-notes-app"
+    title="My Notes Application"
+    date="2026-01-10"
+    summary="A Cross-Platform Application for Linux, Windows, MacOS and Android." 
+    lang="Tauri, Kotlin, Yaml"
+>}}
+
+##
+{{< development
+    link="https://github.com/shivjeet1/auto-install"
+    title="ArchIso bundler"
+    date="2025-04-01"
+    summary="Unattended Arch Linux installation ISO with CI/CD pipeline." 
+    lang="Shell, Yaml"
+>}}
 
 {{< development
     link="https://github.com/shivjeet1/vm-lc3"
@@ -32,14 +49,6 @@ pygmentsUseClasses: true
     date="2025-03-18"
     summary="OCR (Optical Character Recognition) tool that runs locally."
     lang="Python"
->}}
-##
-{{< development
-    link="https://github.com/shivjeet1/auto-install"
-    title="ArchIso bundler"
-    date="2025-04-01"
-    summary="Unattended Arch Linux installation ISO with CI/CD pipeline." 
-    lang="Bash, Yaml"
 >}}
 ##
 {{< development 

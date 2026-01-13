@@ -116,12 +116,12 @@ While functional, this approach will be upgraded to Room — a modern SQLite wra
 
 ### Planned Features
 
-- 🗃️ File/database-backed storage using Room DB with LiveData and ViewModel integration
-- 🏷️ Note tagging, filtering, and text-based search using queryable schema
-- 📤 Export/share notes to other apps via Android Intent system
-- 💻 JavaFX desktop version (exploratory, to reuse core logic via shared module)
-- 🎨 Enhanced dark/light themes using `AppCompatDelegate` and `themes.xml`
-- ☁️ Cloud sync via Firebase Realtime Database or Google Drive API
+-  File/database-backed storage using Room DB with LiveData and ViewModel integration
+-  Note tagging, filtering, and text-based search using queryable schema
+-  Export/share notes to other apps via Android Intent system
+-  JavaFX desktop version (exploratory, to reuse core logic via shared module)
+-  Enhanced dark/light themes using `AppCompatDelegate` and `themes.xml`
+-  Cloud sync via Firebase Realtime Database or Google Drive API
 
 ---
 

@@ -23,7 +23,7 @@ languageCode = "en"
   showBackToTopButton = true # true or false for "back to top" button on posts and pages
 
 socialIcons = [ 
-    {name = "twitter", url = "https://x.com/shivjeet_1"},
+    #{name = "twitter", url = "https://x.com/shivjeet_1"},
     {name = "linkedin", url = "https://www.linkedin.com/in/shivam-lavhale"},
     {name = "github", url = "https://github.com/shivjeet1"},
     {name = "gmail", url = "mailto:shivamlavhalepatil@gmail.com"}
