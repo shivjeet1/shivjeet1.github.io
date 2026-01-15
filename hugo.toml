@@ -49,15 +49,21 @@ socialIcons = [
     weight = 3
 
   [[menu.main]]
+    name = "Skills"
+    pre = "<span data-feather='book'></span>"
+    url = "/skills/"
+    weight = 4
+
+  [[menu.main]]
     name = "Projects"
     pre = "<span data-feather='code'></span>"
     url = "/projects/"
-    weight = 4 
+    weight = 5 
 
 [markup]
   [markup.tableOfContents]
     startLevel = 1
-    endLevel = 4
+    endLevel = 5
     ordered = false
 
 [minify]

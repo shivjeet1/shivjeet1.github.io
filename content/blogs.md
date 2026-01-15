@@ -20,7 +20,6 @@ I write to document, reflect, and share — hoping it helps others along the way
 
 ---
 
-
 {{< project-grid >}}
 
   {{< project-card
