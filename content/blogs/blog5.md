@@ -1,13 +1,13 @@
 ---
-title: "5 Must-Try Magisk Modules for Android"
-date: 2023-08-16
-tags: ["Android", "Magisk", "Root", "Modules", "Customization"]
+title: "5 Magisk Modules for Android"
+date: 2022-07-16
+tags: ["Android", "Magisk", "Rooting", "Modules", "Customization"]
 description: "Some of the most useful magisk modules which work regardless of your android version."
 summary: "Discover 5 essential Magisk modules to enhance your rooted Android device."
 ShowPostNavLinks: true
-weight: 27
+weight: 95
 type: post
-image: "/images/blog5/magisk.jpg"
+image: "/images/blogs/magisk.jpg"
 showTableOfContents: true
 draft: false
 
@@ -19,7 +19,7 @@ Magisk is a **systemless rooting solution** for Android that lets you modify you
 
 Here are **5 essential modules** that every Android enthusiast should try.
 
-![magisk](/images/blog5/magisk.jpg "Top 5 Magisk modules")
+![magisk](/images/blogs/magisk.jpg "Top 5 Magisk modules")
 
 ---
 

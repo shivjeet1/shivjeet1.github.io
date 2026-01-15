@@ -1,14 +1,14 @@
 ---
 author: "Shivam Lavhale"
 title: "Unlocking Bootloader: A Complete Guide"
-date: 2021-12-31
+date: 2020-12-31
+tags: ["Redmi Note 8", "Bootloader", "Custom ROMs", "Rooting"]
 description: "Learn how to unlock the bootloader on your Redmi Note 8, including the pros and cons of an unlocked bootloader and the step-by-step process to do it."
 summary: "This blog covers the detailed steps to unlock the bootloader on your Redmi Note 8, along with the benefits and risks of doing so. A personal take on experimenting with custom ROMs and modifications."
-tags: ["Redmi Note 8", "Bootloader", "Custom ROMs", "Rooting"]
 ShowPostNavLinks: true
-weight: 25
+weight: 99
 type: post
-image: "/images/blog1/unlock-bootloader.jpg"
+image: "/images/blogs/unlock-bootloader.jpg"
 showTableOfContents: true
 draft: false
 ---
@@ -17,7 +17,7 @@ Unlocking Bootloader on Redmi Note 8: A Complete Guide
 ---
 Unlocking the bootloader is the first step to fully customizing your Xiaomi device. My Redmi Note 8 was my experimental device where I first learned about unlocking the bootloader, flashing ROMs, and exploring custom recoveries. If you're looking to unlock your Redmi Note 8’s bootloader, this guide will walk you through the process.
 
-![AI generated thumbnail](/images/blog1/unlock-bootloader.jpg "AI Generated Thumbnail")
+![AI generated thumbnail](/images/blogs/unlock-bootloader.jpg "AI Generated Thumbnail")
 
 What is a Bootloader?
 ---
@@ -25,14 +25,14 @@ A bootloader is a program that initializes the operating system when you power o
 
 Pros and Cons of Unlocking Bootloader
 ---
-✅ Pros:
+ Pros:
 - **Install Custom ROMs** – Get rid of MIUI and experience cleaner, faster ROMs like LineageOS or crDroid.
 - **Root Access** – Gain administrative control using Magisk.
 - **Flash Custom Recoveries** – Install TWRP or OrangeFox for advanced flashing options.
 - **Debloat & Performance Optimization** – Remove unnecessary system apps and optimize the device.
 - **Advanced Customization** – Modify system-level settings and themes.
 
-❌ Cons:
+ Cons:
 - **Voids Warranty** (in some cases) – Unlocking may void Xiaomi's official warranty.
 - **Device Security Risk** – An unlocked bootloader makes it easier for malicious software to modify the system.
 - **OTA Updates Might Break Things** – Official MIUI updates might not work properly after unlocking.
@@ -40,13 +40,13 @@ Pros and Cons of Unlocking Bootloader
 
 Steps to Unlock Bootloader on a Xiaomi Device
 ---
-📌 **Prerequisites:**
+ **Prerequisites:**
 - A Windows PC with **Xiaomi Unlock Tool** installed
 - Your **Redmi Note 8** with at least 50% battery
 - A **Mi Account** (must be at least 3 days old)
 - A **USB Cable** to connect your device to the PC
 
-🔓 **Step-by-Step Guide**
+ **Step-by-Step Guide**
 ---
 1️⃣ Enable [Developer Options](https://developer.android.com/studio/debug/dev-options#enable) & OEM Unlocking
 ---

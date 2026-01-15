@@ -1,23 +1,23 @@
 ---
 author: "Shivam Lavhale"
 title: "Rooting Redmi Note 8"
-date: 2022-08-22
+date: 2022-02-19
 description: "A step-by-step guide to installing Magisk on the Redmi Note 8, enabling root access for customizations and advanced tweaks."
 summary: "This guide explains how to install Magisk on your Redmi Note 8 using TWRP recovery. If you've already unlocked your bootloader and installed a custom recovery, this is the next step in your modding journey."
-tags: ["Magisk", "Rooting", "Redmi Note 8", "Custom ROMs", "TWRP"]
+tags: ["Magisk", "Rooting", "Android", "Custom ROMs", "TWRP"]
 ShowPostNavLinks: true
-weight: 27
+weight: 96
 type: post
-image: "/images/blog4/install-magisk.jpg"
+image: "/images/blogs/install-magisk.jpg"
 showTableOfContents: true
 draft: false
 ---
 
 Installing Magisk and Rooting Redmi Note 8
 ---
-Once you've [unlocked your bootloader](../unlocking-bootloader-redmi-note8/) and [installed TWRP](../installing-twrp-custom-recovery-without-a-pc/) on your Redmi Note 8, you're all set to root your device. Rooting grants you superuser access, allowing full control of the Android OS. This guide walks you through the process of installing Magisk, the most popular and systemless rooting tool available.
+Once you've [unlocked your bootloader](../blog4/) and [installed TWRP](../blog2/) on your Redmi Note 8, you're all set to root your device. Rooting grants you superuser access, allowing full control of the Android OS. This guide walks you through the process of installing Magisk, the most popular and systemless rooting tool available.
 
-![Magisk Logo](/images/blog4/install-magisk.jpg "Magisk Root")
+![Magisk Logo](/images/blogs/install-magisk.jpg "Magisk Root")
 
 What is Magisk?
 ---
@@ -25,16 +25,16 @@ Magisk is a systemless root solution that modifies the boot image rather than sy
 
 Benefits of Magisk:
 ---
-- ✅ **Systemless Rooting** – Doesn’t touch the system partition
-- ✅ **Magisk Modules** – Enhance your phone with add-ons like Viper4Android, ad-blockers, and more
-- ✅ **Pass SafetyNet** – Works with apps that detect root
-- ✅ **Hide Root from Apps** – With MagiskHide (deprecated in latest versions but partially functional through modules)
-- ✅ **OTA Support** – Easier updates without losing root (in some cases)
+- **Systemless Rooting** – Doesn’t touch the system partition
+- **Magisk Modules** – Enhance your phone with add-ons like Viper4Android, ad-blockers, and more
+- **Pass SafetyNet** – Works with apps that detect root
+- **Hide Root from Apps** – With MagiskHide (deprecated in latest versions but partially functional through modules)
+- **OTA Support** – Easier updates without losing root (in some cases)
 
 Prerequisites
 ---
-- Bootloader must be **unlocked** (see [Unlocking Guide](../unlocking-bootloader-redmi-note8/))
-- **TWRP** must be installed (see [TWRP Without PC](../installing-twrp-custom-recovery-without-a-pc/))
+- Bootloader must be **unlocked** (see [Unlocking Guide](../blog4/))
+- **TWRP** must be installed (see [TWRP Without PC](../blog2/))
 - **Magisk ZIP or APK file** downloaded from the [official GitHub releases](https://github.com/topjohnwu/Magisk/releases)
 - Battery level above 50%
 
@@ -63,7 +63,7 @@ Wait for the process to finish.
 2. Once booted, install the **Magisk APK** (if not already installed)
 3. Open the app to verify root access
 
-You should now see Magisk installed with root access granted 🎉
+You should now see Magisk installed with root access granted
 
 Post-Installation Tips
 ---

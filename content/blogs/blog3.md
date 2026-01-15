@@ -1,14 +1,14 @@
 ---
 author: "Shivam Lavhale"
 title: "Installing CrDroid: CUSTOM ROM"
-date: 2022-01-20
+date: 2021-07-20
 description: "A step-by-step guide to installing crDroid on your Redmi Note 8 using TWRP. Includes prerequisites, downloads, and flashing instructions."
 summary: "This blog walks you through the process of installing crDroid on the Redmi Note 8 (codename: ginkgo), covering everything from prerequisites to first boot setup."
 tags: ["crDroid", "Custom ROMs", "Redmi Note 8"]
 ShowPostNavLinks: true
-weight: 27
+weight: 97
 type: post
-image: "/images/blog3/crdroid-install.jpg"
+image: "/images/blogs/images.jpg"
 showTableOfContents: true
 draft: false
 ---
@@ -19,7 +19,7 @@ So, you've unlocked your bootloader and installed TWRP—what next? Time to brea
 
 This guide walks you through installing crDroid on your device using TWRP. 🛠️
 
-![CrDroid Logo](/images/blog3/images.jpg "crDroid")
+![CrDroid Logo](/images/blogs/images.jpg "crDroid")
 
 What is CrDroid?
 ---
@@ -30,7 +30,7 @@ What is CrDroid?
 - Lots of customization options
 - Clean UI with useful additions
 
-Prerequisites ✅
+Prerequisites 
 ---
 Before you begin, make sure you have:
 
@@ -42,10 +42,10 @@ Before you begin, make sure you have:
 ### Required Files:
 Download the following before starting:
 
-1. 📦 **CrDroid ROM for ginkgo** – [Official CrDroid Downloads](https://crdroid.net/ginkgo)
-2. 🔧 **Firmware** (if required) – Usually included in the CrDroid package
-3. 🔒 **MindTheGapps** or **NikGapps** – Choose one: [MindTheGapps](https://mindthegapps.org/) / [NikGapps](https://nikgapps.com/)
-4. 🧩 (Optional) **Magisk** – If you want root access: [Magisk GitHub](https://github.com/topjohnwu/Magisk)
+1. **CrDroid ROM for ginkgo** – [Official CrDroid Downloads](https://crdroid.net/ginkgo)
+2. **Firmware** (if required) – Usually included in the CrDroid package
+3. **MindTheGapps** or **NikGapps** – Choose one: [MindTheGapps](https://mindthegapps.org/) / [NikGapps](https://nikgapps.com/)
+4. (Optional) **Magisk** – If you want root access: [Magisk GitHub](https://github.com/topjohnwu/Magisk)
 
 ⚠️ Backup everything before proceeding. Flashing a new ROM will wipe your data!
 
@@ -79,13 +79,13 @@ Transfer the CrDroid ROM, GApps, and optionally Magisk to your phone’s interna
 - Go to **Reboot** → **System**
 - First boot can take 5–10 minutes
 
-First Boot Experience 🎉
+First Boot Experience 
 ---
 - Go through setup like a stock Android phone
 - Connect Wi-Fi, add Google Account (if GApps installed)
 - Enjoy your new ROM!
 
-Troubleshooting Tips 🛠️
+Troubleshooting Tips
 ---
 - [Bootloop? Try wiping again or check firmware version.](https://miuirom.org/updates/xiaomi-bootloop)
 - [No GApps? Reboot into recovery and flash GApps again.]
@@ -95,5 +95,5 @@ Conclusion
 ---
 CrDroid gives your Redmi Note 8 a fresh, clean, and customizable Android experience. Once installed, it opens up the full potential of your device while keeping things smooth and battery-efficient.
 
-Happy flashing, and welcome to the world of custom ROMs! 🚀
+Happy flashing, and welcome to the world of custom ROMs!
 

@@ -1,14 +1,14 @@
 ---
 author: "Shivam Lavhale"
 title: "Installing Custom Recovery"
-date: 2022-01-07
+date: 2021-01-07
+tags: ["TWRP", "Android", "Custom ROMs", "Rooting", "Bootloader"]
 description: "Learn how to install TWRP custom recovery on your Android device without using a computer. A handy guide for enthusiasts who want more control over their phones."
 summary: "This guide explains how to install TWRP recovery directly on an Android device without needing a PC. Ideal for users with unlocked bootloaders who want to flash ROMs or root their device."
-tags: ["TWRP", "Custom Recovery", "Custom ROMs", "Rooting", "Bootloader"]
 ShowPostNavLinks: true
-weight: 26
+weight: 98
 type: post
-image: "/images/blog2/install-twrp.jpg"
+image: "/images/blogs/install-twrp.jpg"
 showTableOfContents: true
 draft: false
 ---
@@ -17,7 +17,7 @@ Installing TWRP Custom Recovery Without a PC
 ---
 Once you’ve unlocked your bootloader, the next step in Android customization is installing a custom recovery. TWRP (Team Win Recovery Project) is the most widely used recovery for flashing ROMs, Magisk, and creating backups. This guide walks you through installing TWRP on your device without the need for a computer.
 
-![TWRP Boot Screen](/images/blog2/install-twrp.jpg "TWRP Recovery")
+![TWRP Boot Screen](/images/blogs/install-twrp.jpg "TWRP Recovery")
 
 What is TWRP Recovery?
 ---
@@ -31,20 +31,20 @@ TWRP is a touch-based custom recovery that replaces your device’s stock recove
 Pros and Cons of Using TWRP
 ---
 
-✅ **Pros:**
+ **Pros:**
 - Full control over your system partition and root access
 - Ability to flash custom ROMs and Magisk for rooting
 - Advanced troubleshooting and repair tools
 - On-device backup and restore with ease
 
-❌ **Cons:**
+ **Cons:**
 - Replaces your stock recovery, which may affect OTA updates
 - Some devices might lose Widevine L1 (DRM) or face bootloop if improperly flashed
 - Needs careful flashing—wrong paths can soft brick your device
 
 Prerequisites
 ---
-📌 **Before You Begin:**
+ **Before You Begin:**
 - Bootloader must be **unlocked**
 - Your device must be **rooted** (preferably with Magisk)
 - Downloaded TWRP `.img` file for your exact device model
@@ -70,11 +70,11 @@ su
 ### 4️⃣ Step 4: Flash TWRP Image to Recovery Partition
 Use the following command:
 
-```bash
-dd if=/sdcard/twrp.img of=/dev/block/bootdevice/by-name/recovery
+```adb
+fastboot flash recovery twrp.img
 ```
 
-> ⚠️ **Important:** The recovery partition path may vary based on your device. Double-check it before flashing.
+>  **Important:** The recovery partition path may vary based on your device. Double-check it before flashing.
 
 ### 5️⃣ Step 5: Reboot into Recovery
 Immediately reboot to recovery after flashing:
@@ -95,9 +95,9 @@ When your device boots into recovery, you should see the TWRP interface. From he
 
 Troubleshooting Tips
 ---
-- 🔒 If TWRP reverts back to stock recovery, flash a **disable encryption** or **DM-Verity** zip after installing TWRP.
-- 🛠️ Flashing fails? Double-check the recovery partition path.
-- 🚫 Some devices may not support this method and require fastboot.
+- If TWRP reverts back to stock recovery, flash a **disable encryption** or **DM-Verity** zip after installing TWRP.
+- Flashing fails? Double-check the recovery partition path.
+- Some devices may not support this method and require fastboot.
 
 Conclusion
 ---
