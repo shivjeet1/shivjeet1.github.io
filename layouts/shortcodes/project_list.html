@@ -1,0 +1,97 @@
+{{/* Allow optional limit, e.g. {{< project_list limit="3" >}} */}}
+{{ $limit := .Get "limit" | default 100 }}
+{{ $projects := first $limit site.Data.projects }}
+
+<div class="project-grid">
+  {{ range $projects }}
+  
+  <a class="development-card" href="{{ .link }}" target="_blank">
+    <div class="development-title">{{ .title }}</div>
+    <div class="development-meta">{{ .date }}</div>
+    <div class="development-summary">{{ .summary }}</div>
+    
+    <div class="development-commits" id="commit-count-{{ .title | urlize }}">
+      <span class="loading-dots">Loading...</span>
+    </div>
+    
+    <div class="development-languages">{{ .lang }}</div>
+  </a>
+
+  {{ end }}
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const projects = [
+        {{ range $projects }}
+        { title: "{{ .title | urlize }}", link: "{{ .link }}" },
+        {{ end }}
+    ];
+
+    projects.forEach(proj => {
+        if (!proj.link || !proj.link.includes('github.com')) {
+            updateStatus(proj.title, ""); 
+            return;
+        }
+
+        let cleanLink = proj.link.replace(/\/$/, ""); 
+        const repoPath = cleanLink.replace('https://github.com/', '');
+        
+        const commitElement = document.getElementById(`commit-count-${proj.title}`);
+        if (!commitElement) return;
+
+        // 3. Fetch Data
+        fetch(`https://api.github.com/repos/${repoPath}/commits?per_page=1`)
+            .then(async res => {
+                if (!res.ok) {
+                    if (res.status === 403) throw new Error("Rate Limit");
+                    if (res.status === 404) throw new Error("Not Found");
+                    throw new Error("Error");
+                }
+
+                const linkHeader = res.headers.get('Link');
+                if (linkHeader) {
+                    const lastPageMatch = linkHeader.match(/&page=(\d+)>; rel="last"/);
+                    if (lastPageMatch) {
+                        commitElement.innerText = `Commits: ${lastPageMatch[1]}`;
+                    } else {
+                        commitElement.innerText = `Commits: 1+`; 
+                    }
+                } else {
+                    commitElement.innerText = `Commits: 1+`;
+                }
+            })
+            .catch(err => {
+                console.error(`GitHub API Error for ${repoPath}:`, err);
+                
+                // Show friendly error on the card
+                if (err.message === "Rate Limit") {
+                    commitElement.innerText = "API Limit";
+                    commitElement.style.color = "#ff4444"; 
+                } else if (err.message === "Not Found") {
+                    commitElement.innerText = "Repo 404";
+                } else {
+                    commitElement.innerText = "Commits: -";
+                }
+            });
+    });
+
+    function updateStatus(title, text) {
+        const el = document.getElementById(`commit-count-${title}`);
+        if(el) el.innerText = text;
+    }
+});
+</script>
+
+<style>
+.loading-dots {
+    animation: blink 1.5s infinite;
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+@keyframes blink {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+</style>

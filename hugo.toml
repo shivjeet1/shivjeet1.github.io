@@ -11,16 +11,18 @@ languageCode = "en"
   avatarSize = "size-m"
   avatarURL = "/images/shivam1.jpg"
   customHeadHTML = """
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/pureblack.css">
-    <link rel="stylesheet" fref="/css/math.css">
+    <link rel="stylesheet" href="/css/math.css">
+    <link rel="stylesheet" href="/css/skills.css">
   """
 
   description = "Still exploring, still learning, still building."
   author = 'Shivam Vishnu Lavhale'
   metaKeywords = ["blog", "shivjeet1", "hugo"]
   footer = "[shivjeet1](https://github.com/shivjeet1)"
-  showBackToTopButton = true # true or false for "back to top" button on posts and pages
+  showBackToTopButton = true 
 
 socialIcons = [ 
     #{name = "twitter", url = "https://x.com/shivjeet_1"},
@@ -38,20 +40,20 @@ socialIcons = [
 
   [[menu.main]]
     name = "About"
-    pre = "<span data-feather='tag'></span>"
+    pre = "<span data-feather='user'></span>"
     url = "/about/"
     weight = 2
 
   [[menu.main]]
-    name = "Blogs"
-    pre = "<span data-feather='book'></span>"
-    url = "/blogs/"
+    name = "Skills"
+    pre = "<span data-feather='layers'></span>"
+    url = "/skills/"
     weight = 3
 
   [[menu.main]]
-    name = "Skills"
-    pre = "<span data-feather='book'></span>"
-    url = "/skills/"
+    name = "Blogs"
+    pre = "<span data-feather='book-open'></span>"
+    url = "/blogs/"
     weight = 4
 
   [[menu.main]]
@@ -68,3 +70,5 @@ socialIcons = [
 
 [minify]
     minifyOutput = true
+
+

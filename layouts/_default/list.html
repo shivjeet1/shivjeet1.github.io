@@ -1,7 +1,49 @@
 {{ define "main" }}
-    {{ if eq .Type "page" }}
-        {{- partial "page.html" . -}}
+<div class="project-section">
+  <h1>{{ .Title }}</h1>
+  <div class="post-content">
+    {{ .Content }} </div>
+
+  <div class="project-grid">
+    {{/* Since this file is specifically for Projects, we don't need to ask "what type?" */}}
+    
+    {{/* 1. Try to find Markdown Content Pages in content/projects/ */}}
+    {{ $sectionPages := .Pages }} 
+    
+    {{ if gt (len $sectionPages) 0 }}
+      {{ range $sectionPages }}
+        <a class="project-card" href="{{ .RelPermalink }}">
+           {{/* Image Logic */}}
+           {{ $img := .Params.image | default .Params.cover }}
+           {{ with $img }}
+             <img class="project-image" src="{{ . }}" alt="{{ $.Title }}">
+           {{ end }}
+
+           <div class="project-title">{{ .Title }}</div>
+           <div class="project-meta">{{ .Date.Format "Jan 02, 2006" }}</div>
+           <div class="project-summary">{{ .Summary | truncate 120 }}</div>
+        </a>
+      {{ end }}
+
     {{ else }}
-        {{- partial "list.html" . -}}
+
+      {{/* 2. Fallback to Data File (data/projects.yaml) */}}
+      {{/* We hardcode "projects" here because this file lives in layouts/projects/ */}}
+      {{ $data := index site.Data "projects" }}
+      
+      {{ range $data }}
+        <a class="project-card" href="{{ .link | default "#" }}" target="_blank">
+          {{ with .image }}
+            <img class="project-image" src="{{ . }}" alt="{{ .title }}">
+          {{ end }}
+          
+          <div class="project-title">{{ .title }}</div>
+          {{ with .date }}<div class="project-meta">{{ . }}</div>{{ end }}
+          <div class="project-summary">{{ .summary }}</div>
+        </a>
+      {{ end }}
+      
     {{ end }}
+  </div>
+</div>
 {{ end }}

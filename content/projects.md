@@ -26,7 +26,7 @@ pygmentsUseClasses: true
     summary="Unattended Arch Linux installation ISO with CI/CD pipeline." 
     lang="Shell, Yaml"
 >}}
-
+##
 {{< development
     link="https://github.com/shivjeet1/vm-lc3"
     title="Virtual Machine"
@@ -74,5 +74,4 @@ pygmentsUseClasses: true
     summary="A pacman game game written in C. Two versions non-conio for LINUX."
     lang="C"
 >}}
-
 
