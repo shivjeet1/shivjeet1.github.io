@@ -1,17 +1,45 @@
+- category: "System Engineering & Linux"
+  items:
+    - name: Arch Linux
+      icon: devicon-archlinux-plain
+    - name: ISO Building
+      icon: devicon-linux-plain
+    - name: Bash
+      icon: devicon-bash-plain
+    - name: SSH
+      icon: devicon-ssh-original-wordmark
+    - name: Vim
+      icon: devicon-vim-plain
+
+- category: "Automation, CI/CD & DevOps"
+  items:
+    - name: GitHub Actions
+      icon: devicon-githubactions-plain
+    - name: Docker
+      icon: devicon-docker-plain
+    - name: Python Automation
+      icon: devicon-python-plain
+    - name: Selenium WebDriver
+      icon: devicon-python-plain
+
 - category: "Programming Languages"
   items:
     - name: Java
       icon: devicon-java-plain
+    - name: C
+      icon: devicon-c-plain
+    - name: C++
+      icon: devicon-cplusplus-plain
     - name: Python
       icon: devicon-python-plain
-    - name: JavaScript
-      icon: devicon-javascript-plain
-    - name: TypeScript
-      icon: devicon-typescript-plain
     - name: Bash
       icon: devicon-bash-plain
+    - name: Ruby (Basic)
+      icon: devicon-ruby-plain
+    - name: Lua
+      icon: devicon-lua-plain
 
-- category: "Web & Application Dev"
+- category: "Application & Web Development"
   items:
     - name: React
       icon: devicon-react-original
@@ -19,32 +47,49 @@
       icon: devicon-html5-plain
     - name: CSS3
       icon: devicon-css3-plain
+    - name: JavaScript
+      icon: devicon-javascript-plain
+    - name: TypeScript
+      icon: devicon-typescript-plain
     - name: Vite
       icon: devicon-vitejs-plain
-    - name: Tauri
-      icon: devicon-tauri-original
+    - name: Vue
+      icon: devicon-vuejs-plain
+    - name: Xml
+      icon: devicon-xml-plain
+    - name: Kotlin
+      icon: devicon-kotlin-plain
 
-- category: "DevOps & Tools"
+
+- category: "Databases & Storage"
   items:
-    - name: Docker
-      icon: devicon-docker-plain
+    - name: SQLite
+      icon: devicon-sqlite-plain
+    - name: SQL Basics
+      icon: devicon-postgresql-plain
+
+- category: "Version Control & Tooling"
+  items:
     - name: Git
       icon: devicon-git-plain
     - name: GitHub
       icon: devicon-github-original
-    - name: Linux
-      icon: devicon-linux-plain
+    - name: Project Documentation
+      icon: devicon-markdown-original
+    - name: Hugo
+      icon: devicon-hugo-plain
+    - name: Jekyll
+      icon: devicon-jekyll-plain
+    - name: Tauri
+      icon: devicon-tauri-plain
 
-- category: "System & Customization"
+- category: "Mobile & Platform Tools"
   items:
-    - name: Arch Linux
-      icon: devicon-archlinux-plain
     - name: Android
       icon: devicon-android-plain
-    - name: SSH
-      icon: devicon-ssh-original-wordmark
-    - name: Vim
-      icon: devicon-vim-plain
+    - name: Android Studio
+      icon: devicon-androidstudio-plain
+
 
 
 
