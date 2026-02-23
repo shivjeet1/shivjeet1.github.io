@@ -8,7 +8,7 @@ tags: ["crDroid", "Custom ROMs", "Redmi Note 8"]
 ShowPostNavLinks: true
 weight: 97
 type: post
-image: "/images/blogs/images.jpg"
+image: "/images/blogs/install-crdroid.jpg"
 showTableOfContents: true
 draft: false
 ---
@@ -19,7 +19,7 @@ So, you've unlocked your bootloader and installed TWRP—what next? Time to brea
 
 This guide walks you through installing crDroid on your device using TWRP. 🛠️
 
-![CrDroid Logo](/images/blogs/install-crdoid.jpg "crDroid")
+![CrDroid Logo](/images/blogs/install-crdroid.jpg "crDroid")
 
 What is CrDroid?
 ---
