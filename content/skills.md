@@ -3,6 +3,7 @@ title: "Skills"
 date: 2025-04-06
 description: "Technical stack and tools."
 showToc: false 
+type: page
 ---
 
 ## Overview

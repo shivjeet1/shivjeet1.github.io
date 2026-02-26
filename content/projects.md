@@ -66,7 +66,7 @@ pygmentsUseClasses: true
     date="2024-08-09"
     summary="A minimal text editor like 'nano' written in C."
     lang="C"
-    >}}
+>}}
 ##
 {{< development
     link="https://github.com/shivjeet1/pacman-game-c"

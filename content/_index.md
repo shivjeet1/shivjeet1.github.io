@@ -1,4 +1,5 @@
 
+
 ## A short introduction
 - Curious by nature, A CSE student invested in System Development, Linux, Cybersecurity and DevOps.
 
@@ -7,14 +8,6 @@
 - Currently an UnderGrad studying at
    >**[Shri Sant Gajanan Maharaj College of Engineering, Shegaon](https://ssgmce.ac.in)**
 
-- About me
-   > **Read [About](/about) for more info.**
+> [Resume/CV here](https://shivjeet1.s-ul.eu/sNDmPdcX)
 
-   > **Find my [Resume/CV here](https://shivjeet1.s-ul.eu/sNDmPdcX)**
-
-- Blogs
-   >**Checkout my [Blogs here](/blogs/).**
-
-- Projects
-  > **See what I [build](/projects).**
 
