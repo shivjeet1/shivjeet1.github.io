@@ -9,14 +9,14 @@
     {{ if (.Site.Params.Footer) }}
 
         {{ if and (eq .Kind "page") (.Date) }}
-            {{ .Scratch.Add "footerText" (.Date | time.Format "2006") }}
+            {{ .Scratch.Add "footerText" (.Date | time.Format "2026") }}
         {{ else }}
-            {{ .Scratch.Add "footerText" (time.Now | time.Format "2006") }}
+            {{ .Scratch.Add "footerText" (time.Now | time.Format "2026") }}
         {{ end }}
 
-        {{ if and (eq .Kind "page") (.Lastmod) (gt (time.Format "2006" .Lastmod) (time.Format "2006" .Date)) }}
+        {{ if and (eq .Kind "page") (.Lastmod) (gt (time.Format "2026" .Lastmod) (time.Format "2026" .Date)) }}
             {{ .Scratch.Add "footerText" "-" }}
-            {{ .Scratch.Add "footerText" (.Lastmod | time.Format "2006") }}
+            {{ .Scratch.Add "footerText" (.Lastmod | time.Format "2026") }}
         {{ end }}
 
         {{ .Scratch.Add "footerText" " " }}
@@ -34,6 +34,6 @@
     {{ end }}
 
     <span>
-        Made with &#10084;&#65039; by <a target="_blank" href="https://github.com/shivjeet1">Shivam Lavhale</a>
+        Made by <a target="_blank" href="https://github.com/shivjeet1">shivjeet1</a>
     </span>
 </footer>
