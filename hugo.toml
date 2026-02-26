@@ -10,6 +10,12 @@ languageCode = "en"
   avatarAltText = "avatar"
   avatarSize = "size-m"
   avatarURL = "/images/shivam1.jpg"
+
+  showPostsOnHomePage = "recent" 
+  numberPostsOnHomePage = 3
+  showRecentPostsOnHomePage = true
+
+
   customHeadHTML = """
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="/css/navbar.css">
@@ -21,7 +27,6 @@ languageCode = "en"
   description = "Still exploring, still learning, still building."
   author = 'Shivam Vishnu Lavhale'
   metaKeywords = ["blog", "shivjeet1", "hugo"]
-  footer = "[shivjeet1](https://github.com/shivjeet1)"
   showBackToTopButton = true 
 
 socialIcons = [ 
