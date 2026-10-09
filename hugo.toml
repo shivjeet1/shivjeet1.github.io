@@ -20,14 +20,14 @@ languageCode = "en"
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   """
   cssFiles = ["css/navbar.css", "css/pureblack.css", "css/math.css", "css/skills.css"]
-  resumeURL = "https://shivjeet1.s-ul.eu/NhiM9pPs"
+  resumeURL = "/resume/Shivam-Lawale-Resume.pdf"
 
   description = "Linux, CI/CD and System Architecture."
   author = 'Shivam Lawale'
-  metaKeywords = ["SDET", "QA Automation", "Linux", "DevOps", "CI/CD", "Go", "Rust", "Shivam Lavhale"]
+  metaKeywords = ["SDET", "QA Automation", "Linux", "DevOps", "CI/CD", "Go", "Rust", "Shivam Lawale"]
 
 socialIcons = [ 
-  {name = "linkedin", url = "https://www.linkedin.com/in/shivam-lavhale"},
+  {name = "linkedin", url = "https://www.linkedin.com/in/shivam-lawale"},
   {name = "github", url = "https://github.com/shivjeet1"},
   {name = "gmail", url = "mailto:shivamlawale2005@gmail.com"}
 ]
@@ -36,27 +36,28 @@ socialIcons = [
 [menu]
   [[menu.main]]
     name = "Home"
-    pre = "<span data-feather='home'></span>"
     url = "/#home"
     weight = 1
 
   [[menu.main]]
     name = "About"
-    pre = "<span data-feather='user'></span>"
     url = "/#about"
     weight = 2
 
   [[menu.main]]
     name = "Projects"
-    pre = "<span data-feather='code'></span>"
     url = "/#projects"
     weight = 3
 
   [[menu.main]]
     name = "Blogs"
-    pre = "<span data-feather='book-open'></span>"
     url = "/#blogs"
     weight = 4
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/#contact"
+    weight = 5
 
 
 [markup]

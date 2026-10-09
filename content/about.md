@@ -26,7 +26,7 @@ type : page
 {{<skills>}}
 
 - **Certifications:**
-  > [Red Hat Certified System Administrator (RH124)](https://www.linkedin.com/posts/shivam-lavhale_redhatcertification1-activity-7295864768324636672-394F)
+  > [Red Hat Certified System Administrator (RH124)](https://www.linkedin.com/posts/shivam-lawale_redhatcertification1-activity-7295864768324636672-394F)
 
   > [NPTEL DSA (Java)](https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL25CS148S106830017210856051)
 
