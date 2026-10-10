@@ -1,5 +1,9 @@
 ---
 title: "Stop Paying for AI Agents: n8n Local AI Stack + SearXNG + Docker"
+slug: "n8n-local-ai-stack-searxng-docker"
+aliases:
+  - /blogs/blog18/
+  - /blogs/blog18/index.html
 date: 2026-09-13
 tags: ["Automation", "Docker", "n8n", "AI", "SearXNG", "Self-Hosted"]
 description: "How to run a fully containerized, offline-capable n8n AI Assistant sandbox with local web search and auto-syncing workflows."

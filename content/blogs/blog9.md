@@ -1,5 +1,9 @@
 ---
 title: "Run Linux GUI on Android Using Termux + VNC"
+slug: "run-linux-gui-android-termux-vnc"
+aliases:
+  - /blogs/blog9/
+  - /blogs/blog9/index.html
 date: 2023-09-05
 tags: ["Android", "Linux", "Termux", "VNC", "GUI"]
 description: "Step-by-step guide to run a Linux desktop GUI on Android using Termux, proot-distro, and VNC."

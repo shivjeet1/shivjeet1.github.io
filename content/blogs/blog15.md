@@ -1,5 +1,9 @@
 ---
 title: "Blog Doesn't Need React: The SSG & Markdown Supremacy"
+slug: "blog-doesnt-need-react-ssg-markdown"
+aliases:
+  - /blogs/blog15/
+  - /blogs/blog15/index.html
 date: 2025-11-05
 tags: ["Web Dev", "Hugo", "Markdown", "Neovim", "Anti-Bloat"]
 description: "Why deploying a React app to serve static text is a crime against hardware, and how to use Hugo instead."

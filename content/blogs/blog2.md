@@ -1,6 +1,10 @@
 ---
-author: "Shivam Lavhale"
+author: "Shivam Lawale"
 title: "Installing Custom Recovery"
+slug: "installing-custom-recovery"
+aliases:
+  - /blogs/blog2/
+  - /blogs/blog2/index.html
 date: 2021-01-07
 tags: ["TWRP", "Android", "Custom ROMs", "Rooting", "Bootloader"]
 description: "Learn how to install TWRP custom recovery on your Android device without using a computer. A handy guide for enthusiasts who want more control over their phones."

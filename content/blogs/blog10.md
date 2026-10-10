@@ -1,5 +1,9 @@
 ---
 title: "Installing Arch Linux Manually"
+slug: "installing-arch-linux-manually"
+aliases:
+  - /blogs/blog10/
+  - /blogs/blog10/index.html
 date: 2024-02-12
 tags: ["Linux", "Arch Linux", "Installation", "Manual Install", "ArchWiki"]
 description: "A step-by-step guide to installing Arch Linux manually, following ArchWiki principles, without shortcuts."

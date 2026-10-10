@@ -1,5 +1,9 @@
 ---
 title: "Building a 16-bit VM from Scratch"
+slug: "building-16bit-vm-from-scratch"
+aliases:
+  - /blogs/blog14/
+  - /blogs/blog14/index.html
 date: 2025-08-10
 tags: ["Systems", "C", "Virtual Machine", "LC-3", "Low Level"]
 description: "Cutting through the layers of modern abstraction by building a Little Computer 3 (LC-3) Virtual Machine."

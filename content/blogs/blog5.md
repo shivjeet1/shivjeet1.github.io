@@ -1,5 +1,9 @@
 ---
 title: "5 Magisk Modules for Android"
+slug: "5-magisk-modules-for-android"
+aliases:
+  - /blogs/blog5/
+  - /blogs/blog5/index.html
 date: 2022-07-16
 tags: ["Android", "Magisk", "Rooting", "Modules", "Customization"]
 description: "Some of the most useful magisk modules which work regardless of your android version."

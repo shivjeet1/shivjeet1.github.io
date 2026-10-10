@@ -1,5 +1,9 @@
 ---
 title: "Arch Linux Post-Installation Setup (My Lazy Setup)"
+slug: "arch-linux-post-installation-setup"
+aliases:
+  - /blogs/blog11/
+  - /blogs/blog11/index.html
 date: 2024-08-18
 tags: ["Linux", "Arch Linux", "Post Install", "DWM", "Dotfiles"]
 description: "A practical Arch Linux post-installation setup using automated scripts, dotfiles, and suckless tools."

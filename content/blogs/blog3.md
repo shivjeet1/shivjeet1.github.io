@@ -1,6 +1,10 @@
 ---
-author: "Shivam Lavhale"
+author: "Shivam Lawale"
 title: "Installing CrDroid: CUSTOM ROM"
+slug: "installing-crdroid-custom-rom"
+aliases:
+  - /blogs/blog3/
+  - /blogs/blog3/index.html
 date: 2021-07-20
 description: "A step-by-step guide to installing crDroid on your Redmi Note 8 using TWRP. Includes prerequisites, downloads, and flashing instructions."
 summary: "This blog walks you through the process of installing crDroid on the Redmi Note 8 (codename: ginkgo), covering everything from prerequisites to first boot setup."

@@ -1,5 +1,9 @@
 ---
 title: "Desktop Apps with Tauri + Rust"
+slug: "desktop-apps-tauri-rust"
+aliases:
+  - /blogs/blog16/
+  - /blogs/blog16/index.html
 date: 2026-01-12
 tags: ["Rust", "Tauri", "Next.js", "Linux", "Anti-Bloat"]
 description: "How to build lightning-fast, minimal desktop applications without the 500MB RAM tax of Electron."

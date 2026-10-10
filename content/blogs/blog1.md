@@ -1,6 +1,10 @@
 ---
-author: "Shivam Lavhale"
+author: "Shivam Lawale"
 title: "Unlocking Bootloader: A Complete Guide"
+slug: "unlocking-bootloader"
+aliases:
+  - /blogs/blog1/
+  - /blogs/blog1/index.html
 date: 2020-12-31
 tags: ["Redmi Note 8", "Bootloader", "Custom ROMs", "Rooting"]
 description: "Learn how to unlock the bootloader on your Redmi Note 8, including the pros and cons of an unlocked bootloader and the step-by-step process to do it."

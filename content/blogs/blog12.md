@@ -1,5 +1,9 @@
 ---
 title: "Arch Linux on Android: The Lazy Way (Termux + Distrobox + X11)"
+slug: "arch-linux-on-android-termux-distrobox"
+aliases:
+  - /blogs/blog12/
+  - /blogs/blog12/index.html
 date: 2024-12-17
 tags: ["Android", "Termux", "Arch Linux", "Distrobox", "X11", "No Root"]
 description: "Running a full Arch Linux GUI on Android without rooting, using Termux, Distrobox, and hardware-accelerated X11."

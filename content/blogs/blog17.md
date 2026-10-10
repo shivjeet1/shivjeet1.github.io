@@ -1,5 +1,9 @@
 ---
 title: "Building a 10MB Linux OS: Kernel + BusyBox + QEMU"
+slug: "building-10mb-linux-os-kernel-busybox-qemu"
+aliases:
+  - /blogs/blog17/
+  - /blogs/blog17/index.html
 date: 2026-05-31
 tags: ["Linux", "Kernel", "QEMU", "BusyBox", "Minimalism"]
 description: "How to compile a custom x86_64 kernel and minimal initramfs without losing your sanity."

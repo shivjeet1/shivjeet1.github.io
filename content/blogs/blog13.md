@@ -1,5 +1,9 @@
 ---
 title: "Configuring Neovim: The Lazy Developer's IDE"
+slug: "configuring-neovim-lazy-developers-ide"
+aliases:
+  - /blogs/blog13/
+  - /blogs/blog13/index.html
 date: 2025-03-12
 tags: ["Linux", "Neovim", "LazyVim", "Productivity", "Terminal"]
 description: "Ditching the 2000-line init.lua file for a blazing fast, pre-configured Neovim setup that just works."

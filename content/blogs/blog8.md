@@ -1,5 +1,9 @@
 ---
 title: "Run Linux on Android Using Termux (Proot Method)"
+slug: "run-linux-on-android-termux-proot"
+aliases:
+  - /blogs/blog8/
+  - /blogs/blog8/index.html
 date: 2023-04-07
 tags: ["Android", "Linux", "Termux", "Proot", "CLI"]
 description: "Step-by-step guide to run a full Linux environment on Android using Termux and proot, without root."

@@ -1,5 +1,9 @@
 ---
 title: "5 Essential LSPosed Modules to Supercharge Your Android"
+slug: "essential-lsposed-modules"
+aliases:
+  - /blogs/blog7/
+  - /blogs/blog7/index.html
 date: 2023-02-17
 tags: ["Android", "LSPosed", "Root", "Modules", "Customization", "Privacy"]
 description: "Unlock the true potential of your rooted device with these essential LSPosed modules."

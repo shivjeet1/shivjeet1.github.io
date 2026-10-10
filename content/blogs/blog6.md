@@ -1,5 +1,9 @@
 ---
 title: "5 Must-Try Android Debloating & Optimization Tools"
+slug: "android-debloating-optimization-tools"
+aliases:
+  - /blogs/blog6/
+  - /blogs/blog6/index.html
 date: 2022-11-24
 tags: ["Android", "Debloat", "Performance", "Optimization", "Tools"]
 description: "Useful Android debloating and optimization tools that work on most devices, rooted or non-rooted."
