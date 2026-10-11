@@ -22,6 +22,8 @@ const HEADING_TO_TOC_CLASS = {
 function ready() {
     feather.replace({ 'stroke-width': 1, width: 20, height: 20 });
     setThemeByUserPref();
+    initReveal();
+    initCopyEmail();
 
     if (document.querySelector('main#content > .container') !== null &&
         document.querySelector('main#content > .container').classList.contains('post')) {
@@ -143,4 +145,35 @@ function setTheme(themeToSet, targets) {
 function setThemeAndStore(themeToSet, targets) {
     setTheme(themeToSet, targets);
     localStorage.setItem(THEME_PREF_STORAGE_KEY, themeToSet);
+}
+
+function initReveal() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    const els = document.querySelectorAll('.section, .row, .hero__text > *');
+    els.forEach(el => el.classList.add('reveal'));
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-in');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    els.forEach(el => io.observe(el));
+}
+
+function initCopyEmail() {
+    document.querySelectorAll('.copy-email').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const value = btn.getAttribute('data-email') || btn.getAttribute('data-copy') || '';
+            if (!value) return;
+            try {
+                await navigator.clipboard.writeText(value);
+                const original = btn.textContent;
+                btn.textContent = 'copied';
+                setTimeout(() => { btn.textContent = original; }, 1200);
+            } catch (e) { /* clipboard unavailable */ }
+        });
+    });
 }
