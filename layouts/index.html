@@ -1,68 +1,72 @@
 {{ define "main" }}
 
-<!-- HERO SECTION -->
-<section id="home" class="home-about">
-    <div class="avatar">
-        {{ if isset .Site.Params "avatarurl" }}
-        <img class={{ .Site.Params.AvatarSize | default "size-m" }} src='{{ .Scratch.Get "avatarImgSrc" }}' alt="{{ .Site.Params.AvatarAltText|default "avatar" }}">
-        {{ end }}
+{{ $email := "" }}
+{{ range .Site.Params.SocialIcons }}{{ if eq .name "gmail" }}{{ $email = .url }}{{ end }}{{ end }}
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero__text">
+        <p class="hero__role">{{ .Site.Params.Description }}</p>
+        <h1>{{ .Site.Title }}</h1>
+        <div class="hero__lead">{{ .Content }}</div>
+        <div class="hero__cta">
+            <a class="btn btn--primary" href="/projects/">Projects</a>
+            {{ if isset .Site.Params "resumeurl" }}
+            <a class="btn" href="{{ .Site.Params.resumeURL }}">Resume (PDF)</a>
+            {{ end }}
+            {{ with $email }}<a class="btn" href="{{ . }}">Email</a>{{ end }}
+        </div>
+        <p class="hero__meta">Computer Science, class of 2027. Based in India.</p>
     </div>
-
-    <h1>{{ .Site.Title }}</h1>
-
-    {{ if isset .Site.Params "description" }}
-        <h2>{{ .Site.Params.Description }}</h2>
-    {{ end }}
-
-    <div class="home-content" style="margin-top: 2rem;">
-        {{ .Content }}
+    <div class="hero__canvas-wrap" aria-hidden="true">
+        <canvas id="hero-field" class="hero__canvas"></canvas>
     </div>
-
 </section>
 
-<div class="flex-break"></div>
+<!-- SELECTED WORK -->
+<section id="projects" class="section">
+    {{ partial "home-projects.html" . }}
+</section>
 
-<!-- ABOUT SECTION -->
-<section id="about" style="margin-top: 5rem; padding-top: 2rem;">
+<!-- WRITING -->
+<section id="blogs" class="section">
+    {{ partial "home-blogs.html" . }}
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <div class="section__head">
+        <h2 class="section__title">About</h2>
+    </div>
     {{ with .Site.GetPage "/about" }}
         {{ .Content }}
     {{ end }}
 </section>
 
-<!-- BLOGS SECTION -->
-<section id="projects" style="margin-top: 5rem; padding-top: 2rem;">
-    {{ if isset .Site.Params "showpostsonhomepage" }}
-        <div class="flex-break"></div>
-        {{ partial "home-projects.html" . }}
-    {{ end }}
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <div class="section__head">
+        <h2 class="section__title">Contact</h2>
+    </div>
+    <ul class="contact-list">
+        {{ with $email }}
+        <li>Email: <a href="{{ . }}">{{ replace . "mailto:" "" }}</a>
+            <button class="copy-email" data-email="{{ replace . "mailto:" "" }}" aria-label="Copy email address">copy</button>
+        </li>
+        {{ end }}
+        {{ range .Site.Params.SocialIcons }}
+        {{ if ne .name "gmail" }}
+        <li>{{ .name | title }}: <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .url }}</a></li>
+        {{ end }}
+        {{ end }}
+        {{ if isset .Site.Params "resumeurl" }}
+        <li>Resume: <a href="{{ .Site.Params.resumeURL }}">{{ .Site.Params.resumeURL }}</a></li>
+        {{ end }}
+    </ul>
 </section>
 
-<!-- BLOGS SECTION -->
-<section id="blogs" style="margin-top: 5rem; padding-top: 2rem;">
-    {{ if isset .Site.Params "showpostsonhomepage" }}
-        <div class="flex-break"></div>
-        {{ partial "home-blogs.html" . }}
-    {{ end }}
-</section>
-<br>
-<br>
-
-<!-- RESUME DOWNLOAD BUTTON -->
-<div style="text-align: center; margin-top: 2rem;">
-    {{ if isset .Site.Params "resumeurl" }}
-    <a href="{{ .Site.Params.resumeURL }}" target="_blank" rel="noopener noreferrer" class="resume-btn">
-        <span data-feather="download"></span> Download Resume / CV
-    </a>
-    {{ end }}
-</div>
-
-<!-- DYNAMIC BACK-TO-TOP INJECTION -->
 {{ if .Site.Params.showBackToTopButton }}
     {{ partial "back-to-top.html" . }}
-
 {{ end }}
 
 {{ end }}
-
-
-
