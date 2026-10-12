@@ -4,7 +4,7 @@
 
     <style>
         :root {
-            --accent-color: {{ .Site.Params.AccentColor | default "#FF4D4D" }};
+            --accent-color: {{ .Site.Params.AccentColor | default "#4B61D1" }};
             --font-size: {{ .Site.Params.FontSize | default "1.1rem" }};
         }
     </style>
@@ -47,6 +47,22 @@
     {{ $cssDark := resources.Get "css/dark.css" | minify }}
     <link id="dark-theme" rel="stylesheet" href="{{ $cssDark.RelPermalink }}">
 
+    <script>
+        /* Set the saved theme before first paint to avoid a flash. */
+        (function () {
+            try {
+                var saved = localStorage.getItem("theme-preference");
+                if (!saved) {
+                    saved = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+                }
+                if (saved === "light") {
+                    var sheet = document.getElementById("dark-theme");
+                    if (sheet) sheet.disabled = true;
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     {{ if .Site.Params.cssFiles }}
     {{ range .Site.Params.cssFiles }}
     {{ $css := resources.Get . | minify }}
@@ -55,7 +71,11 @@
     {{ end }}
 
     {{ $jsBundle := resources.Match "js/**.js" | resources.Concat "js/bundle.js" | minify | resources.Fingerprint "sha256" }}
-    <script src="{{ $jsBundle.RelPermalink }}" integrity="{{ $jsBundle.Data.Integrity }}"></script>
+    <script defer src="{{ $jsBundle.RelPermalink }}" integrity="{{ $jsBundle.Data.Integrity }}"></script>
+
+    {{ if .IsHome }}
+    <script type="module" src="/js/hero-field.js"></script>
+    {{ end }}
 
     <!-- Option for user to inject custom html -->
     {{ if .Site.Params.CustomHeadHTML }}
