@@ -40,19 +40,20 @@ socialIcons = [
     weight = 1
 
   [[menu.main]]
-    name = "About"
-    url = "/#about"
-    weight = 2
-
-  [[menu.main]]
     name = "Projects"
     url = "/#projects"
-    weight = 3
+    weight = 2
 
   [[menu.main]]
     name = "Blogs"
     url = "/#blogs"
+    weight = 3
+
+  [[menu.main]]
+    name = "About"
+    url = "/#about"
     weight = 4
+
 
   [[menu.main]]
     name = "Contact"
