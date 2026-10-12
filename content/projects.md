@@ -24,6 +24,7 @@ pygmentsUseClasses: true
 ##
 {{< development
     link="https://github.com/shivjeet1/kernel-os" 
+    live="https://shivjeet1.tech/kernel-os"
     title="Baseline Kernel OS"
     date="2026-05-31"
     summary="Compiled a baseline Linux kernel and BusyBox toolchain from source. Configured and virtualized the custom OS environment using QEMU to validate system-level execution." 

@@ -13,6 +13,7 @@
 
 - title: "Baseline Kernel OS"
   link: "https://github.com/shivjeet1/kernel-os"
+  live: "https://shivjeet1.tech/kernel-os"
   date: "2026-05-31"
   summary: "A baseline Linux kernel and BusyBox toolchain from source."
   lang: "C, Bash, Make"
