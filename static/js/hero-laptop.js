@@ -1,7 +1,9 @@
 /*
- * Hero scene: a ThinkPad rendered with three.js, with the author's real
+ * Hero scene: a Dell Latitude rendered with three.js, with the author's real
  * hyprlock desktop shown on its display. Drag to rotate, scroll to zoom,
  * right-drag (or two fingers) to pan.
+ *
+ * The ThinkPad is kept as a fallback if the primary model cannot be fetched.
  *
  * Loaded on demand and only when there is a canvas, WebGL, a roomy viewport
  * and no save-data request; otherwise the bordered panel is left as-is. When
@@ -54,6 +56,10 @@ async function initHeroLaptop() {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
 
+  // Where the camera sits relative to the model. Used to frame the scene and
+  // to work out which side of the display actually faces the visitor.
+  const viewDir = new THREE.Vector3(0, 0.34, 1).normalize();
+
   const group = new THREE.Group();
   scene.add(group);
 
@@ -80,7 +86,7 @@ async function initHeroLaptop() {
     return sheet ? !sheet.disabled : false;
   };
 
-  let bodyMat = null;
+  const bodyMats = new Set();
 
   function applyTheme() {
     const dark = isDark();
@@ -93,25 +99,50 @@ async function initHeroLaptop() {
     fill.intensity = dark ? 0.5 : 0.5;
     rim.color.setHex(dark ? 0xcfd6ff : 0xffffff);
     rim.intensity = dark ? 1.4 : 0.75;
-    if (bodyMat) bodyMat.color.setHex(dark ? 0x3a372f : 0x2c2a25);
+    for (const mat of bodyMats) mat.color.setHex(dark ? 0x3a372f : 0x2c2a25);
   }
   applyTheme();
 
   // ---- model ---------------------------------------------------------------
-  const root = await new Promise((resolve) => {
-    new GLTFLoader().load('/models/leptop.glb', resolve, undefined, () => resolve(null));
-  });
-  if (!root) return;
+  // Each entry records how its display is found and the yaw that turns that
+  // display toward the camera. The Dell panel's geometry faces away from its
+  // keyboard, so it is spun a quarter turn; the ThinkPad is the fallback.
+  const MODELS = [
+    {
+      url: '/models/laptop_dell.glb',
+      yaw: Math.PI / 2 - 0.22,
+      isScreen: (mat) => Boolean(mat.emissiveMap)
+    },
+    {
+      url: '/models/leptop.glb',
+      yaw: -0.22,
+      isScreen: (mat) => mat.roughness !== undefined && mat.roughness < 0.05
+    }
+  ];
 
-  const model = root.scene;
+  const loader = new GLTFLoader();
+  const load = (url) =>
+    new Promise((resolve) => loader.load(url, resolve, undefined, () => resolve(null)));
+
+  let model = null;
+  let config = null;
+  for (const candidate of MODELS) {
+    const gltf = await load(candidate.url);
+    if (gltf) {
+      model = gltf.scene;
+      config = candidate;
+      break;
+    }
+  }
+  if (!model) return;
+
   model.updateMatrixWorld(true);
   const bounds = new THREE.Box3().setFromObject(model);
   model.position.sub(bounds.getCenter(new THREE.Vector3()));
   group.add(model);
 
-  const baseYaw = -0.22;
   const baseTilt = 0.02;
-  group.rotation.set(baseTilt, baseYaw, 0);
+  group.rotation.set(baseTilt, config.yaw, 0);
 
   let screen = null;
   model.traverse((node) => {
@@ -119,10 +150,12 @@ async function initHeroLaptop() {
     const mats = Array.isArray(node.material) ? node.material : [node.material];
     for (const mat of mats) {
       if (!mat) continue;
-      if (mat.roughness !== undefined && mat.roughness < 0.05) {
-        screen = node; // the display is the only glossy (roughness 0) surface
-      } else if (mat.color && mat.color.getHex() === 0x000000) {
-        bodyMat = mat;
+      if (config.isScreen(mat)) {
+        screen = node; // the display panel
+      } else if (mat.color && !mat.map && Math.max(mat.color.r, mat.color.g, mat.color.b) < 0.1) {
+        // The glTF chassis is all but black, which reads as a silhouette; lift
+        // it to a warm charcoal so it keeps its form under the studio light.
+        bodyMats.add(mat);
         mat.roughness = 0.5;
         mat.metalness = 0.16;
       }
@@ -203,6 +236,9 @@ async function initHeroLaptop() {
     const normal = new THREE.Vector3(na.getX(0), na.getY(0), na.getZ(0))
       .applyMatrix3(new THREE.Matrix3().getNormalMatrix(screen.matrixWorld))
       .normalize();
+    // The panel's geometry normal can face away from the keyboard, so aim the
+    // spill along whichever side of the display the camera actually sees.
+    if (normal.dot(viewDir) < 0) normal.negate();
     const spill = new THREE.PointLight(0xc2d0f0, 0.6, 4, 2);
     spill.position.copy(center).addScaledVector(normal, 0.35);
     scene.add(spill);
@@ -225,8 +261,6 @@ async function initHeroLaptop() {
     controls.autoRotate = false;
   });
   controls.addEventListener('change', () => renderer.render(scene, camera));
-
-  const viewDir = new THREE.Vector3(0, 0.34, 1).normalize();
 
   function resize() {
     const w = wrap.clientWidth;
