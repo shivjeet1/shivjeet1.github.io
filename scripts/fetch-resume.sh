@@ -12,17 +12,25 @@
 #   4. GET  <pdf url>              -> downloads the freshly compiled PDF
 #
 # These are internal, undocumented endpoints and may change without notice.
-# The script fails loudly (non-zero exit) if the PDF is missing or invalid.
+# If every attempt fails, the committed fallback copy is used instead so a
+# transient Overleaf outage does not break the deploy. The script only fails
+# (non-zero exit) when there is no usable fallback either.
+#
+# To refresh the fallback after updating the resume on Overleaf:
+#   bash scripts/fetch-resume.sh && \
+#     cp static/resume/Shivam-Lawale.pdf assets/resume/Shivam-Lawale.pdf
 #
 # Overridable via environment:
 #   OVERLEAF_READ_URL  the read-only share link        (default: this repo's resume)
 #   OUTPUT             destination path                (default: static/resume/Shivam-Lawale.pdf)
+#   FALLBACK           committed last-known-good copy  (default: assets/resume/Shivam-Lawale.pdf)
 #   RETRIES            number of full attempts         (default: 3)
 #
 set -euo pipefail
 
 OVERLEAF_READ_URL="${OVERLEAF_READ_URL:-https://www.overleaf.com/read/fhzpmdkrwyhf#4462ad}"
 OUTPUT="${OUTPUT:-static/resume/Shivam-Lawale.pdf}"
+FALLBACK="${FALLBACK:-assets/resume/Shivam-Lawale.pdf}"
 RETRIES="${RETRIES:-3}"
 
 UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
@@ -151,4 +159,14 @@ while [ "$attempt" -le "$RETRIES" ]; do
   [ "$attempt" -le "$RETRIES" ] && sleep "$((attempt * 2))"
 done
 
-die "failed to fetch the resume after $RETRIES attempts"
+# Every attempt failed. Fall back to the committed last-known-good copy so the
+# deploy still ships a working resume link.
+if [ -f "$FALLBACK" ] && [ "$(head -c 5 "$FALLBACK" 2>/dev/null || true)" = "%PDF-" ]; then
+  cp "$FALLBACK" "$OUTPUT"
+  size="$(wc -c < "$OUTPUT" | tr -d '[:space:]')"
+  log "WARNING: could not fetch a fresh resume from Overleaf; using committed fallback"
+  log "saved $OUTPUT ($size bytes, fallback: $FALLBACK)"
+  exit 0
+fi
+
+die "failed to fetch the resume after $RETRIES attempts and no usable fallback was found"
