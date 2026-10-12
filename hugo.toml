@@ -20,7 +20,7 @@ languageCode = "en"
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   """
   cssFiles = ["css/navbar.css", "css/pureblack.css", "css/math.css", "css/skills.css"]
-  resumeURL = "/resume/Shivam-Lawale-Resume.pdf"
+  resumeURL = "/resume/Shivam-Lawale.pdf"
 
   description = "Linux, CI/CD and System Architecture."
   author = 'Shivam Lawale'
