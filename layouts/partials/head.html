@@ -74,7 +74,15 @@
     <script defer src="{{ $jsBundle.RelPermalink }}" integrity="{{ $jsBundle.Data.Integrity }}"></script>
 
     {{ if .IsHome }}
-    <script type="module" src="/js/hero-field.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="/js/hero-laptop.js"></script>
     {{ end }}
 
     <!-- Option for user to inject custom html -->
