@@ -895,6 +895,11 @@ a:hover .feather-sun {
 
 .hero__canvas.is-ready {
   opacity: 1;
+  cursor: grab;
+}
+
+.hero__canvas.is-ready:active {
+  cursor: grabbing;
 }
 
 /* Sections */
