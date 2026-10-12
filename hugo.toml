@@ -27,7 +27,7 @@ languageCode = "en"
   metaKeywords = ["SDET", "QA Automation", "Linux", "DevOps", "CI/CD", "Go", "Rust", "Shivam Lawale"]
 
 socialIcons = [ 
-  {name = "linkedin", url = "https://www.linkedin.com/in/shivam-lawale"},
+  {name = "linkedin", url = "https://www.linkedin.com/in/shivjeet1"},
   {name = "github", url = "https://github.com/shivjeet1"},
   {name = "gmail", url = "mailto:shivamlawale2005@gmail.com"}
 ]
