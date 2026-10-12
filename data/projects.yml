@@ -2,13 +2,13 @@
   link: "https://github.com/shivjeet1/shunyam"
   live: "https://shivjeet1.tech/shunyam/"
   date: "2026-10-08"
-  summary: "Secure data sanitization for NVMe, SATA and USB media to NIST 800-88 workflows, with hardware-signed destruction certificates and file recovery. Built for the Smart India Hackathon."
+  summary: "Wipes NVMe, SATA and USB drives to NIST 800-88 standards and issues a hardware-signed destruction certificate. Built for the Smart India Hackathon."
   lang: "Rust, Go, Slint, Shell"
 
 - title: "Local-Res Restaurant POS"
   link: "https://github.com/shivjeet1/local-res"
   date: "2026-09-25"
-  summary: "Monorepo point-of-sale and restaurant management system with a Next.js PWA frontend, Fastify and Prisma API, role-based interfaces and a real-time kitchen display."
+  summary: "Restaurant POS and management system with a real-time kitchen display, role-based interfaces and offline-first support."
   lang: "TypeScript, Next.js, Fastify, Prisma"
 
 - title: "Baseline Kernel OS"
