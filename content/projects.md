@@ -13,6 +13,16 @@ pygmentsUseClasses: true
 
 ##
 {{< development
+    link="https://github.com/shivjeet1/shunyam"
+    live="https://shivjeet1.tech/shunyam/"
+    title="Shunya Secure Wipe Platform"
+    date="2026-10-08"
+    summary="Engineered a secure data sanitization platform for NVMe, SATA and USB media to NIST 800-88 workflows, with hardware-signed destruction certificates, physical-presence authorization and file recovery. Built for the Smart India Hackathon."
+    lang="Rust, Go, Slint, Shell"
+>}}
+
+##
+{{< development
     link="https://github.com/shivjeet1/kernel-os" 
     title="Baseline Kernel OS"
     date="2026-05-31"
@@ -81,6 +91,15 @@ pygmentsUseClasses: true
 ---
 
 ## Utility & Application Development
+
+##
+{{< development
+    link="https://github.com/shivjeet1/local-res"
+    title="Local-Res Restaurant POS"
+    date="2026-09-25"
+    summary="Built a monorepo point-of-sale and restaurant management system with a Next.js PWA frontend, Fastify and Prisma API, role-based interfaces, a real-time kitchen display, an analytics dashboard and a Tauri desktop build."
+    lang="TypeScript, Next.js, Fastify, Prisma"
+>}}
 
 ##
 {{< development

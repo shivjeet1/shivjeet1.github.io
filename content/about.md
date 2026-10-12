@@ -48,6 +48,6 @@ type : page
 - [Shri Sant Gajanan Maharaj College of Engineering, Shegaon](https://ssgmce.ac.in)
    > Expected Graduation: 2027
 
-   > CGPA: 7.31/10
+   > CGPA: 7.52/10
 
 ---
