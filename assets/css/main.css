@@ -600,6 +600,12 @@ table td {
     display: inline-block;
   }
 
+  /* The theme switch is a .nav-link as well, so it needs the same rescue as
+     the hamburger to stay reachable on phones. */
+  .nav-links .dark-theme-toggle {
+    display: inline-block;
+  }
+
   main#content {
     box-sizing: border-box;
     padding: 0 1.5rem;
