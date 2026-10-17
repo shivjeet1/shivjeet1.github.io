@@ -181,14 +181,12 @@ function initCopyEmail() {
 
 function registerServiceWorker() {
     if (!('serviceWorker' in navigator) || !window.isSecureContext) return;
-    // A local preview would otherwise answer from the previous build's cache and
-    // hide the edit you just made. Production only.
+    // A local preview would otherwise serve the previous build's cache.
     if (/^(localhost|127\.0\.0\.1|\[::1\]|::1)$/.test(window.location.hostname)) return;
-    // The hero stands down on metered connections; do not start filling a
-    // cache behind its back either.
+    // The hero stands down on metered connections; so does the cache.
     if (navigator.connection && navigator.connection.saveData) return;
-    // Caching is an enhancement: if registration fails the page is unaffected.
+    // Caching is an enhancement; the page is unaffected if this fails.
     navigator.serviceWorker
         .register('/sw.js', { scope: '/', updateViaCache: 'none' })
-        .catch(() => { /* no caching, site works as before */ });
+        .catch(() => {});
 }

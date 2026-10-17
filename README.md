@@ -87,41 +87,26 @@ kept out of the site build.
 
 ## Caching
 
-`static/sw.js` is a service worker that caches the two heaviest, slowest-changing
-groups of files:
+`static/sw.js` caches two things: the versioned three.js modules from unpkg,
+cache-first, since the URL pins the version and the response is immutable; and
+same-origin files under `/images/` and `/models/`, stale-while-revalidate, so a
+repeat visit is served from the device while a background request refreshes the
+copy. Nothing is pre-fetched: an asset is cached the first time a page asks for
+it. HTML, CSS and the JS bundle stay with the browser's HTTP cache, because the
+stylesheets are not fingerprinted and a stale one could pair with a fresh page.
 
-- the three.js modules from unpkg, whose URLs embed the version and are therefore
-  immutable, served cache-first;
-- same-origin files under `/images/` and `/models/`, served stale-while-revalidate
-  so a repeat visit is answered from the device and the page never waits on the
-  network.
+Registration lives in `assets/js/main.js` and is skipped without service worker
+support, outside a secure context, on `localhost` (so a local preview cannot
+answer from the previous build's cache), or under `saveData`. If registration or
+caching fails, the site behaves exactly as before.
 
-Nothing is pre-fetched at install: an asset is cached the first time a page
-actually asks for it, so a visitor who never opens the home page never downloads
-the model. HTML, CSS and the JS bundle are left to the browser's HTTP cache; the
-stylesheets are not fingerprinted, so caching them here could pair a stale
-stylesheet with a fresh page.
-
-Registration lives in `assets/js/main.js` and is skipped when the browser has no
-service worker support, outside a secure context, on `localhost` (so a local
-preview cannot answer from the previous build's cache), or when the connection
-reports `saveData`. If registration or caching fails, the site behaves exactly as
-it did before.
-
-To invalidate every cached asset, bump `VERSION` at the top of `static/sw.js`.
-That is the only manual step: image and model filenames are not fingerprinted, so
-a changed file keeps the same name. GitHub Pages answers `sw.js` with
-`max-age=600`, so an update reaches returning visitors within about ten minutes;
-registration passes `updateViaCache: 'none'` so the browser revalidates the
-worker script itself rather than trusting that cached copy.
-
-To remove caching entirely, delete `static/sw.js` and the `registerServiceWorker`
-call. Repeat visitors keep their cold cache until the worker is gone; clearing
-site data in devtools drops it immediately.
-
-To exercise the worker during development, serve `public/` over HTTPS from a
-non-local host (a tunnel works) or temporarily drop the localhost guard, then
-check `chrome://serviceworker-internals` or the Application panel in devtools.
+Bump `VERSION` at the top of `static/sw.js` to invalidate everything: image and
+model filenames are not fingerprinted, so a changed file keeps its name. GitHub
+Pages caches `sw.js` for ten minutes, so a bump reaches returning visitors shortly
+after; registration passes `updateViaCache: 'none'` so the browser revalidates
+the worker script itself. To remove caching, delete `static/sw.js` and the
+`registerServiceWorker` call. To exercise the worker locally, serve `public/` from
+a non-local HTTPS host and check the Application panel in devtools.
 
 ## Resume
 
