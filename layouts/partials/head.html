@@ -35,8 +35,10 @@
     <meta property="twitter:url" content="{{ .Permalink }}">
     <meta name="twitter:image" content="{{ absURL $image }}">
 
-    <!-- SEO canonicals: helps Google understand your site better when using marketing campaign tagging etc -->
     <link rel="canonical" href="{{ .Permalink }}">
+    {{ with .OutputFormats.Get "rss" }}
+    <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+    {{ end }}
 
     {{ $cssNormalize := resources.Get "css/normalize.min.css" }}
     <link rel="stylesheet" type="text/css" href="{{ $cssNormalize.RelPermalink }}" media="print">
@@ -83,6 +85,32 @@
         }
     </script>
     <script type="module" src="/js/hero-laptop.js"></script>
+    {{ end }}
+
+    <!-- Structured data -->
+    {{ if .IsHome }}
+    {{ $sameAs := slice }}
+    {{ range .Site.Params.SocialIcons }}{{ if ne .name "gmail" }}{{ $sameAs = $sameAs | append .url }}{{ end }}{{ end }}
+    {{ $ld := dict
+        "@context" "https://schema.org"
+        "@type" "Person"
+        "name" .Site.Params.Author
+        "url" .Site.BaseURL
+        "description" .Site.Params.Description
+        "sameAs" $sameAs }}
+    <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+    {{ else if eq .Type "post" }}
+    {{ $ld := dict
+        "@context" "https://schema.org"
+        "@type" "BlogPosting"
+        "headline" (.Title | plainify)
+        "description" $description
+        "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+        "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+        "mainEntityOfPage" .Permalink
+        "author" (dict "@type" "Person" "name" .Site.Params.Author)
+        "image" (absURL $image) }}
+    <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
     {{ end }}
 
     <!-- Option for user to inject custom html -->
