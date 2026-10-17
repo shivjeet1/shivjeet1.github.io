@@ -4,7 +4,7 @@
 </div>
 
 <div class="rows">
-    {{ $data := index .Site.Data "projects" }}
+    {{ $data := index hugo.Data "projects" }}
     {{ range first 4 $data }}
     <div class="row">
         <span class="row__date">{{ with .date }}{{ . }}{{ end }}</span>

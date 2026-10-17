@@ -3,7 +3,7 @@ title = "Shivam Lawale"
 defaultContentLanguage = "en"
 enableEmoji = true
 enableRobotsTXT = true
-languageCode = "en"
+locale = "en"
 
 [params]
   avatarAltText = "Shivam Lawale - QA & Systems Engineer"
