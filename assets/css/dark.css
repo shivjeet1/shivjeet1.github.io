@@ -31,12 +31,12 @@ a:hover .feather-moon {
   color: currentColor;
 }
 
-.gk-social-icons-list .gk-social-icon,
-.gk-social-icons-list .gk-social-icon a:visited {
+.social-icons-list .social-icon,
+.social-icons-list .social-icon a:visited {
   fill: var(--light-text-color);
 }
 
-.gk-social-icons-list .gk-social-icon a:hover {
+.social-icons-list .social-icon a:hover {
   fill: var(--accent-color);
 }
 

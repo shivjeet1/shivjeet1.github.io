@@ -433,18 +433,18 @@ table td {
   font-size: 1.2em;
 }
 
-.gk-social-icons {
+.social-icons {
   text-align: center;
 }
 
-.gk-social-icons .gk-social-icons-list {
+.social-icons .social-icons-list {
   display: inline-block;
   list-style-type: none;
   padding: 0;
   text-align: center;
 }
 
-.gk-social-icons-list .gk-social-icon {
+.social-icons-list .social-icon {
   box-sizing: border-box;
   display: inline-block;
   fill: var(--light-text-color);
@@ -453,7 +453,7 @@ table td {
   width: 24px;
 }
 
-.gk-social-icon a svg path {
+.social-icon a svg path {
   transition: fill 0.15s ease;
 }
 

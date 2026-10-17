@@ -1,10 +1,10 @@
 <footer class="footer">
 <!-- SOCIAL ICONS -->
 {{ if isset .Site.Params "socialicons" }}
-<div class="gk-social-icons">
-    <ul class="gk-social-icons-list">
+<div class="social-icons">
+    <ul class="social-icons-list">
         {{ range .Site.Params.SocialIcons }}
-        <li class="gk-social-icon">
+        <li class="social-icon">
             <a href="{{ .url }}" target="_blank" rel="{{ if .rel }}{{ .rel }} {{ end }}noopener noreferrer" aria-label="Learn more on {{ .name }}">
                 <img class="svg-inject" src="{{ relURL "svg/icons/" }}{{ .name | lower }}.svg" alt="">
             </a>
