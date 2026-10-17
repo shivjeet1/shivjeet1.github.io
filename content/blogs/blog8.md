@@ -8,7 +8,6 @@ date: 2023-04-07
 tags: ["Android", "Linux", "Termux", "Proot", "CLI"]
 description: "Step-by-step guide to run a full Linux environment on Android using Termux and proot, without root."
 summary: "Learn how to install and use Linux on Android via Termux using proot-distro."
-ShowPostNavLinks: true
 weight: 92
 type: post
 image: "/images/blogs/termux-linux.jpg"

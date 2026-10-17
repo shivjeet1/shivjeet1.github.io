@@ -3,10 +3,7 @@ title: "Projects"
 summary: "System-level engineering, automated CI/CD pipelines, and cross-platform application architectures."
 draft: false
 type: page
-enableInlineShortcodes: true
-enableRobotsTXT: true
 showBackToTopButton : true
-pygmentsUseClasses: true
 ---
 
 ## Core Engineering & Infrastructure

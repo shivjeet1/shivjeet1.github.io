@@ -8,7 +8,6 @@ date: 2025-03-12
 tags: ["Linux", "Neovim", "LazyVim", "Productivity", "Terminal"]
 description: "Ditching the 2000-line init.lua file for a blazing fast, pre-configured Neovim setup that just works."
 summary: "How to get a full IDE experience in the terminal using LazyVim, without spending your weekend reading plugin documentation."
-ShowPostNavLinks: true
 weight: 87
 type: post
 image: "/images/blogs/lazyvim.jpg"

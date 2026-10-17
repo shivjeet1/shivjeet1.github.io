@@ -8,7 +8,6 @@ date: 2024-12-17
 tags: ["Android", "Termux", "Arch Linux", "Distrobox", "X11", "No Root"]
 description: "Running a full Arch Linux GUI on Android without rooting, using Termux, Distrobox, and hardware-accelerated X11."
 summary: "How to turn your phone into an Arch workstation without bricking it. Uses Termux:X11 for speed and Distrobox for sanity."
-ShowPostNavLinks: true
 weight: 88
 type: post
 image: "/images/blogs/arch-android.jpg"

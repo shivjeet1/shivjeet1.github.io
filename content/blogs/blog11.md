@@ -8,7 +8,6 @@ date: 2024-08-18
 tags: ["Linux", "Arch Linux", "Post Install", "DWM", "Dotfiles"]
 description: "A practical Arch Linux post-installation setup using automated scripts, dotfiles, and suckless tools."
 summary: "How I set up my Arch Linux system after installation using scripts, dotfiles, and a minimal DWM workflow."
-ShowPostNavLinks: true
 weight: 89
 type: post
 image: "/images/blogs/setup.jpg"

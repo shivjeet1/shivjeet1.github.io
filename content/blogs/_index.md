@@ -2,11 +2,7 @@
 title: "Blogs"
 date: 2025-04-06
 description: "Technical write-ups, architecture breakdowns, and engineering logs."
-showToc: true
 type: page
-enableInlineShortcodes: true
-enableRobotsTXT: true
-pygmentsUseClasses: true
 ---
 
 ## Engineering Logs

@@ -8,7 +8,6 @@ date: 2022-07-16
 tags: ["Android", "Magisk", "Rooting", "Modules", "Customization"]
 description: "Some of the most useful magisk modules which work regardless of your android version."
 summary: "Discover 5 essential Magisk modules to enhance your rooted Android device."
-ShowPostNavLinks: true
 weight: 95
 type: post
 image: "/images/blogs/magisk.jpg"

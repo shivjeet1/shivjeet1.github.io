@@ -8,7 +8,6 @@ date: 2022-11-24
 tags: ["Android", "Debloat", "Performance", "Optimization", "Tools"]
 description: "Useful Android debloating and optimization tools that work on most devices, rooted or non-rooted."
 summary: "Discover 5 powerful tools to remove bloatware and improve Android performance."
-ShowPostNavLinks: true
 weight: 94
 type: post
 image: "/images/blogs/android-debloat.jpg"

@@ -1,13 +1,7 @@
 ---
 author : 'Shivam Lawale'
 title : 'About'
-ShowShareButtons : false
-ShowReadingTime : false
-ShowPostNavLinks : false
-ShowBreadCrumbs : false
 showBackToTopButton : true
-disableShare : true
-ShowToc : false
 type : page
 ---
 

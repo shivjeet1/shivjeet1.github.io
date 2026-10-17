@@ -8,7 +8,6 @@ date: 2025-11-05
 tags: ["Web Dev", "Hugo", "Markdown", "Neovim", "Anti-Bloat"]
 description: "Why deploying a React app to serve static text is a crime against hardware, and how to use Hugo instead."
 summary: "Ditching JavaScript frameworks for a pure Markdown to HTML pipeline using Hugo and automated CI/CD."
-ShowPostNavLinks: true
 weight: 85
 type: post
 image: "/images/blogs/ssg.jpg"

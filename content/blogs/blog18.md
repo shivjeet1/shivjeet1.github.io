@@ -8,7 +8,6 @@ date: 2026-09-13
 tags: ["Automation", "Docker", "n8n", "AI", "SearXNG", "Self-Hosted"]
 description: "How to run a fully containerized, offline-capable n8n AI Assistant sandbox with local web search and auto-syncing workflows."
 summary: "Ditching cloud automation and paid AI agent platforms by self-hosting an n8n AI stack using Docker, complete with local SearXNG and a secure code sandbox."
-ShowPostNavLinks: true
 weight: 82
 type: post
 image: "/images/blogs/n8n-docker.jpg"

@@ -6,15 +6,10 @@ enableRobotsTXT = true
 languageCode = "en"
 
 [params]
-  enableThemeToggle = false
   avatarAltText = "Shivam Lawale - QA & Systems Engineer"
-  avatarSize = "size-m"
   avatarURL = "/images/shivam1.jpg"
 
-  showPostsOnHomePage = "recent" 
-  numberPostsOnHomePage = 3
-  showRecentPostsOnHomePage = true
-  showBackToTopButton = true 
+  showBackToTopButton = true
 
   customHeadHTML = """
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />

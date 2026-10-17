@@ -8,7 +8,6 @@ date: 2023-02-17
 tags: ["Android", "LSPosed", "Root", "Modules", "Customization", "Privacy"]
 description: "Unlock the true potential of your rooted device with these essential LSPosed modules."
 summary: "Discover 5 essential LSPosed modules to enhance, secure, and customize your Android device."
-ShowPostNavLinks: true
 weight: 93
 type: post
 image: "/images/blogs/lsposed_header.jpg"

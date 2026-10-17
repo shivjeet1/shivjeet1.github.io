@@ -8,7 +8,6 @@ date: 2026-01-12
 tags: ["Rust", "Tauri", "Next.js", "Linux", "Anti-Bloat"]
 description: "How to build lightning-fast, minimal desktop applications without the 500MB RAM tax of Electron."
 summary: "Ditching Electron for Tauri. Using a Rust backend and Next.js frontend to build minimal, fast desktop utilities."
-ShowPostNavLinks: true
 weight: 84
 type: post
 image: "/images/blogs/tauri-rust.jpg"

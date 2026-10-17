@@ -8,7 +8,6 @@ date: 2025-08-10
 tags: ["Systems", "C", "Virtual Machine", "LC-3", "Low Level"]
 description: "Cutting through the layers of modern abstraction by building a Little Computer 3 (LC-3) Virtual Machine."
 summary: "How and why I built a 16-bit virtual machine. Emulating memory, registers, and opcodes to understand what actually happens under the hood."
-ShowPostNavLinks: true
 weight: 86
 type: post
 image: "/images/blogs/lc3-vm.jpg"

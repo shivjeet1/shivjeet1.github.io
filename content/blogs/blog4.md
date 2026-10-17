@@ -9,7 +9,6 @@ date: 2022-02-19
 description: "A step-by-step guide to installing Magisk on the Redmi Note 8, enabling root access for customizations and advanced tweaks."
 summary: "This guide explains how to install Magisk on your Redmi Note 8 using TWRP recovery. If you've already unlocked your bootloader and installed a custom recovery, this is the next step in your modding journey."
 tags: ["Magisk", "Rooting", "Android", "Custom ROMs", "TWRP"]
-ShowPostNavLinks: true
 weight: 96
 type: post
 image: "/images/blogs/install-magisk.jpg"

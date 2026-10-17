@@ -8,7 +8,6 @@ date: 2023-09-05
 tags: ["Android", "Linux", "Termux", "VNC", "GUI"]
 description: "Step-by-step guide to run a Linux desktop GUI on Android using Termux, proot-distro, and VNC."
 summary: "Learn how to set up a Linux desktop environment on Android using Termux and VNC."
-ShowPostNavLinks: true
 weight: 91
 type: post
 image: "/images/blogs/linux-gui-android.jpg"

@@ -8,7 +8,6 @@ date: 2026-05-31
 tags: ["Linux", "Kernel", "QEMU", "BusyBox", "Minimalism"]
 description: "How to compile a custom x86_64 kernel and minimal initramfs without losing your sanity."
 summary: "Ditching full desktop distributions to build a bootable Linux OS from scratch that fits in 10MB, run safely inside QEMU."
-ShowPostNavLinks: true
 weight: 83
 type: post
 image: "/images/blogs/kernel.jpg"
