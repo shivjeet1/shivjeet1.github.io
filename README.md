@@ -99,11 +99,6 @@ break a deploy. The GitHub Actions workflow runs this script before building.
 to `master` and publishes `public/` to GitHub Pages. The production build is a
 plain `hugo --minify`; the same command works locally.
 
-## Credits
-
-The layouts and baseline stylesheet descend from the Gokarna theme and its
-upstream projects. `LICENSE` records the full copyright chain and terms.
-
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE), which records the full upstream copyright chain.
