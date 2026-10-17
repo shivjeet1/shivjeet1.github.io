@@ -71,7 +71,3 @@ pre {
 .header-shadow {
   border-bottom-color: var(--light-text-color);
 }
-
-.arrow-logo {
-  background-color: var(--light-tertiary-color);
-}
