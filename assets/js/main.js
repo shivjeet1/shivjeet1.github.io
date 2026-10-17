@@ -24,6 +24,7 @@ function ready() {
     setThemeByUserPref();
     initReveal();
     initCopyEmail();
+    registerServiceWorker();
 
     if (document.querySelector('main#content > .container') !== null &&
         document.querySelector('main#content > .container').classList.contains('post')) {
@@ -176,4 +177,18 @@ function initCopyEmail() {
             } catch (e) { /* clipboard unavailable */ }
         });
     });
+}
+
+function registerServiceWorker() {
+    if (!('serviceWorker' in navigator) || !window.isSecureContext) return;
+    // A local preview would otherwise answer from the previous build's cache and
+    // hide the edit you just made. Production only.
+    if (/^(localhost|127\.0\.0\.1|\[::1\]|::1)$/.test(window.location.hostname)) return;
+    // The hero stands down on metered connections; do not start filling a
+    // cache behind its back either.
+    if (navigator.connection && navigator.connection.saveData) return;
+    // Caching is an enhancement: if registration fails the page is unaffected.
+    navigator.serviceWorker
+        .register('/sw.js', { scope: '/', updateViaCache: 'none' })
+        .catch(() => { /* no caching, site works as before */ });
 }
